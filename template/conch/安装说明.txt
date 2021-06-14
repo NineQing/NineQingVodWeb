@@ -1,0 +1,24 @@
+安装说明：
+上传到苹果cms v10 根目录解压，网站后台切换模板，
+
+网站模板和手机模板都是【conch】模板目录【moban】，清理缓存。
+
+
+
+后台快捷地址
+海螺模板,/nineqing.php/admin/conch/theme
+
+幻灯片推荐9  大图模式需要上传海报图，建议尺寸1680px*580px 小图模式需设置3个推荐才显示
+
+热播推荐1 建议推荐18个最佳。
+
+切记一定要安装PHP扩展 《sg11》  php版本选择7.0~7.2。重要的事情说三遍！
+切记一定要安装PHP扩展 《sg11》  php版本选择7.0~7.2。重要的事情说三遍！
+切记一定要安装PHP扩展 《sg11》  php版本选择7.0~7.2。重要的事情说三遍！
+
+更新模板说明：上传模板，
+
+将本模板下的 conch/asset/admin/theme.html
+theme.html ，放入 路径/application/admin/view/conch/ 中
+如果根目录 /application/admin/view/ 下没有 conch 新建文件夹即可
+

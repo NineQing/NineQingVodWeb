@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>推广 - {$maccms.site_name}</title>
+	<meta name="keywords" content="推广" />
+	<meta name="description" content="推广" />
+	{include file="public/include"}
+</head>
+<body id="art_page">
+   {include file="public/head"}
+   
+   <div class="container ">
+       {include file="ads/ads_shaixuan"}
+       <div class="tuguang">
+		<div class="art_list_row tgg99">
+            <h2>{$conch['theme']['tuiguang']['bt']}：</h2>
+            <div class="tgsm">
+                <span class="tgsmys">{$conch['theme']['tuiguang']['text']}</span>
+            </div>
+            <!--{include file="art/filter"}-->
+		    <div class="pannel">
+                <ul class="artlist clearfix">
+				{maccms:art num="24" paging="yes" half="3" level="5" type="current" order="desc" by="sort"}
+					{include file="art/tgy"}
+				{/maccms:art}
+                </ul>
+                {empty name="$__PAGING__.record_total"}
+				<div class="show_no">抱歉！暂无推广数据！！！</div>
+				{/empty}
+                {include file="widget/page"}<!-- 翻页-->
+            </div>
+		</div>
+		
+		</div>
+	<!--瞅瞅-->
+   </div> 
+   {include file="public/foot"}
+</body>
+</html>

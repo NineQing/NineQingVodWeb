@@ -1,0 +1,21 @@
+<div id="show" style="display: none;">
+    <div class="copy-tip">
+       <p>耶～～复制成功</p>
+    </div>
+</div>
+<div class="am-share">
+	<div class="am-share-url">
+	<span class="title_span">复制下方链接，去粘贴给好友吧：</span>
+	<span id="short" class="url_span">
+{if condition="$conch['theme']['share']['zdyfx'] eq 1"}
+{$conch['theme']['share']['link']|mac_default='http://ys.ain19.com'}
+{else}
+《{$obj.vod_name}》http://{$maccms.site_url}{:mac_url_vod_play($obj,['sid'=>1,'nid'=>1])}
+{/if}
+</span>
+	</div>
+	<div class="am-share-footer">
+	<span class="share_btn">取消</span>
+	<span id="btn" class="copy_btn" data-clipboard-action="copy" data-clipboard-target="#short">一键复制</span>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>玖卿影院-DPlayer 视频播放器</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<style>body, html, .dplayer { padding: 0; margin: 0; width: 100%; height: 100%; background-color:#000; } a { text-decoration: none; } </style>
+	</head>
+  <body>   
+    <div id="player" class="dplayer"></div>
+    <script>
+	  var path = parent.maccms.path?parent.maccms.path:'/';
+	  var urls = parent.MacPlayer.PlayUrl;
+      var jump = "";
+      if(parent.MacPlayer.PlayLinkNext!=''){
+			var jump = parent.MacPlayer.PlayLinkNext;
+      }
+	  document.getElementById('player').innerHTML = '<iframe width="100%" height="100%" allowTransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" src="'+path+'addons/dplayer/?url=' + urls + '&jump='+jump+'&t='+Math.random()+'"></iframe>';
+     </script>
+    <div style="display:none">
+    </div>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+{in name="vo.type_id" value="$conch['theme']['type']['hb']"}
+<!--<li class="vodlist_item num_{$key}">-->
+<!--	<a class="vodlist_thumb lazyload" href="{:mac_url_vod_play($vo,['sid'=>$vo.sid,'nid'=>1])}" title="{$vo.vod_name}" data-original="{:mac_url_img($vo.vod_pic)}">						-->
+<!--		<span class="play hidden_xs"></span>-->
+<!--		<span class="pic_text text_right">{$vo.vod_time|date='Y-m-d',###}</span>-->
+<!--	</a>-->
+<!--	<div class="vodlist_titbox">									-->
+<!--		<p class="vodlist_title">-->
+<!--		<a {if condition="$conch['theme']['playlink']['btn'] eq 1"}href="{:mac_url_vod_play($vo,['sid'=>$vo.sid,'nid'=>1])}"{else/}href="{:mac_url_vod_detail($vo)}"{/if} title="{$vo.vod_name}">{$vo.vod_name}</a>-->
+<!--		</p>-->
+<!--		<p class="vodlist_sub"><i class="iconfont playico">&#xe659;</i>&nbsp;{$vo.vod_hits}次点播</p>-->
+<!--	</div>-->
+<!--</li>-->
+{else}
+<li class="vodlist_item num_{$key}">
+	<a class="vodlist_thumb lazyload" {if condition="$conch['theme']['playlink']['btn'] eq 1"}href="{:mac_url_vod_play($vo,['sid'=>$vo.sid,'nid'=>1])}"{else/}href="{:mac_url_vod_detail($vo)}"{/if} title="{$vo.vod_name}" data-original="{:mac_url_img($vo.vod_pic)}">					
+		<span class="play hidden_xs"></span>
+		<!--{if condition="$maccms.aid eq 1"}-->
+		<!--<span class="vodlist_top">-->
+		<!--    {if condition="($vo.vod_year neq '') and ($vo.vod_year neq 0)"}-->
+		<!--    <em class="voddate voddate_year">-->
+		        
+		<!--        <img src="http://ys.ain19.com/template/conch/img/new.png"/>-->
+		<!--        {$vo.vod_year}-->
+		<!--        </em>-->
+		<!--    {/if}-->
+		<!--    {if condition="$vo.vod_class neq ''"}-->
+		<!--    <em class="voddate voddate_type">-->
+		<!--        <img src="http://ys.ain19.com/template/conch/img/19jin.png"/>-->
+		<!--        {$vo.vod_class|mac_substring=2}-->
+		<!--        </em>-->
+		<!--        {/if}</span>-->
+		<!--        {if condition="($vo.vod_level == 3)"}-->
+  <!--          <span class="jin text_right jinw">-->
+  <!--          <img <img src="http://ys.ain19.com/template/conch/img/19jin.png"/></span>-->
+  <!--          {else/}-->
+  <!--      {/if}-->
+  <!--      {/if}-->
+        
+        {if condition="$vo['type_id_1']==1"}
+        {if condition="$vo.vod_score eq 0"}
+        
+        
+        <span class="pic_text text_right">
+            {if condition="$vo.vod_remarks neq ''"}
+            1{$vo.vod_remarks}{elseif condition="$vo.vod_serial gt 0"}第{$vo.vod_serial}集{else /}已完结{/if}</span>
+        {else/}
+        <em class="voddate voddate_year">
+		        <img src="//{$maccms.site_url}/template/conch/img/new.png"/>
+		        </em>
+		  
+
+        {if condition="($vo.vod_isend == 未完结)"}
+            {else/}
+             <span class="jin text_right jinw">
+            <img <img src="//{$maccms.site_url}/template/conch/img/19jin.png"/></span>
+            {/if}
+            <!--<img <img src="http://ys.ain19.com/template/conch/img/19jin.png"/>-->
+            <span class="xszxj text_right">
+            {$vo.vod_time|date='Y-m-d',###}
+            </span>
+            <span class="pic_text text_right">
+                <i style="color:#fb7299;font-weight:900;" class="iconfont"></i>
+		    <i style="color:#ff1500;font-weight:900;">
+		        {$vo.vod_score}</i></span>
+            
+        <!--    {if condition="($vo.vod_level == 3)"}-->
+        <!--    <span class="jin text_right jinw">-->
+        <!--    <img <img src="http://ys.ain19.com/template/conch/img/19jin.png"/></span>-->
+        <!--    {else/}-->
+        <!--{/if}-->
+            
+        {/if}
+        {else/}
+        <em class="voddate voddate_year">
+		        <img src="//{$maccms.site_url}/template/conch/img/new.png"/ >
+		        </em>
+        {if condition="($vo.vod_isend == 未完结)"}
+            {else/}
+            <span class="jin text_right jinw">
+            <img <img src="//{$maccms.site_url}/template/conch/img/19jin.png"/></span>
+            {/if}
+            <span class="xszxj text_right">
+            {$vo.vod_time|date='Y-m-d',###}
+            </span>
+		<span class="pic_text text_right">
+		    {if condition="$vo.vod_remarks neq ''"}
+		    <i style="color:#fb7299;font-weight:900;" class="iconfont"></i>
+		    <i style="color:#ff1500;font-weight:900;">
+		        {$vo.vod_score}</i>
+		<!--{$vo.vod_remarks}-->
+		<!--{elseif condition="$vo.vod_serial gt 0"}-->
+		<!--第{$vo.vod_serial}集-->
+		{else /}
+		<!--已完结-->
+		<i style="color:#fb7299;font-weight:900;" class="iconfont"></i>
+		<i style="color:#ff1500;font-weight:900;">
+		        {$vo.vod_score}</i>
+		
+		{/if}
+		</span>
+		
+		<!--{if condition="($vo.vod_level == 3)"}-->
+		<!--<span class="jin text_right jinw">-->
+  <!--          <img <img src="http://ys.ain19.com/template/conch/img/19jin.png"/></span>-->
+  <!--          {else/}-->
+  <!--      {/if}-->
+        
+		{/if}
+	</a>
+	<div class="vodlist_titbox">									
+		<p class="vodlist_title">
+		<a {if condition="$conch['theme']['playlink']['btn'] eq 1"}href="{:mac_url_vod_play($vo,['sid'=>$vo.sid,'nid'=>1])}"{else/}href="{:mac_url_vod_detail($vo)}"{/if} title="{$vo.vod_name}">{$vo.vod_name}</a>
+		</p>
+		<p class="vodlist_sub">{$vo.vod_sub|mac_default=$vo.vod_actor|mac_filter_html|mac_default='未知'}</p>
+	</div>
+</li>
+{/in}

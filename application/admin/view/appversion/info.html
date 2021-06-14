@@ -1,0 +1,81 @@
+{include file="../../../application/admin/view/public/head" /}
+<div class="page-container p10">
+    <form class="layui-form layui-form-pane" method="post" action="">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">OS：</label>
+            <div class="layui-input-inline">
+                <input name="os" type="radio" id="rad-1" value="1" title="安卓" {if condition="$info['os'] eq 1"}checked {/if}>
+                <input name="os" type="radio" id="rad-2" value="2" title="IOS" {if condition="$info['os'] eq 2"}checked {/if}>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">强制更新：</label>
+            <div class="layui-input-inline">
+                <input name="is_required" type="radio" id="rad-3" value="0" title="否" {if condition="$info['is_required'] neq 1"}checked {/if}>
+                <input name="is_required" type="radio" id="rad-4" value="1" title="是" {if condition="$info['is_required'] eq 1"}checked {/if}>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">更新方式：</label>
+            <div class="layui-input-inline">
+                <input name="type" type="radio" id="rad-5" value="1" title="跳转更新" {if condition="$info['type'] eq 1"}checked {/if}>
+                <input name="type" type="radio" id="rad-6" value="2" title="直接下载" {if condition="$info['type'] eq 2"}checked {/if}>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">版本号：</label>
+            <div class="layui-input-inline w500">
+                <input type="text" class="layui-input" value="{$info.version}" placeholder="请输入版本号，格式：v1.0.0.0" id="version" name="version">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">下载地址：</label>
+            <div class="layui-input-inline w500">
+                <input type="text" class="layui-input" value="{$info.url}" placeholder="请输入下载地址，格式：http://" id="url" name="url">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">更新描述：</label>
+            <div class="layui-input-inline w500">
+                <textarea name="summary" class="layui-input" id="summary" cols="30" rows="10">{$info.summary}</textarea>
+            </div>
+        </div>
+        <div class="layui-form-item center">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit" data-child="true">保 存</button>
+                <button class="layui-btn layui-btn-warm" type="reset">还 原</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+{include file="../../../application/admin/view/public/foot" /}
+<script type="text/javascript">
+
+    layui.use(['form', 'layer'], function () {
+        // 操作对象
+        var form = layui.form
+            , layer = layui.layer
+            , $ = layui.jquery;
+
+        // 验证
+        form.verify({
+            from: function (value) {
+                if (value == "") {
+                    return "请输入编码";
+                }
+            },
+            show: function (value) {
+                if (value == "") {
+                    return "请输入名称";
+                }
+            }
+        });
+
+    });
+</script>
+
+</body>
+</html>

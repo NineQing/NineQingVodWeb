@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta data-n-head="true" data-hid="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, minimal-ui">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>影视App下载</title>
+    <meta data-n-head="true" name="keywords" content="电影,影视,电影,电视剧,在线电影,免费看电影,免费电视剧,最新电影,爱追剧,影视大全,vip电视剧,vip电影"/>
+    <link rel="shortcut icon" href="images2/bitbug_favicon.ico" type="image/x-icon" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family:       'Lato', Arial, sans-serif; background:#FFF
+
+        }
+        #safari{
+
+            width: 100%;
+
+        }
+        .weixin-tip	img{
+            max-width: 100%;
+            height: auto;
+        }
+        .weixin-tip{
+            display: none;
+            position: fixed;
+            left:0;
+            top:0;
+            bottom:0;
+            background: rgba(0,0,0,0.8);
+            filter:alpha(opacity=80);
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+        }
+        .weixin-tip p{
+            text-align: center;
+            margin-top: 10%;
+            padding:0 5%;
+        }
+
+    </style>
+    <link href="__STATIC__/css/app_install/style.css" rel="stylesheet" type="text/css" />
+    <!--<script type="text/javascript" charset="UTF-8" src="//lelefenxi.com/openinstall.js"></script>-->
+    <!--<script type="text/javascript">-->
+
+        <!--var data = OpenInstall.parseUrlParams();-->
+        <!--new OpenInstall({-->
+
+            <!--appKey : "rnqmlh",-->
+
+            <!--onready : function() {-->
+                <!--var m = this, button = document.getElementById("downloadButton");-->
+                <!--button.style.visibility = "visible";-->
+
+
+                <!--m.schemeWakeup();-->
+
+                <!--button.onclick = function() {-->
+                    <!--m.wakeupOrInstall();-->
+                    <!--return false;-->
+                <!--}-->
+            <!--}-->
+        <!--}, data);-->
+
+    <!--</script>-->
+    <script>
+        $(window).on("load",function(){
+            var winHeight = $(window).height();
+            function is_weixin() {
+                var ua = navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            var isWeixin = is_weixin();
+            if(isWeixin){
+                $(".weixin-tip").css("height",winHeight);
+                $(".weixin-tip").show();
+            }
+        })
+    </script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div class="wrap">
+
+    <div class="container">
+        <div class="content"><img src="__STATIC__/images/app_install/top2.jpg"></div>
+        <div class="content"><img src="__STATIC__/images/app_install/top_r2_c1.jpg"></div>
+        <!--<div class="note">公告：iOS用户如遇到闪退情况，请卸载重新安装即可。</div>-->
+        <div class="dlbg" >
+            <ul>
+                <li style="text-align:right"><a href="javascript:void(0)" class="add_install_record" id="ios"><img src="__STATIC__/images/app_install/ios.png"></a></li>
+                <li><a href="" class="add_install_record"><img src="__STATIC__/images/app_install/Android.png" id="downloadButton"></a></li>
+                <li style="text-align:right;display:none;"	><a  href="javascript:void(0)" id="ipad_" class="add_install_record"><img src="__STATIC__/images/app_install/ipad.png"></a></li>
+                <li style="display:none;"><a href="javascript:void(0)" class="add_install_record"><img src="__STATIC__/images/app_install/tv.png"></a></li>
+            </ul>
+
+            <div style="clear:both"></div>
+        </div>
+        <!--<div class="content cbg">-->
+
+            <!--<p class="p1">影视官网连接        </p>-->
+            <!--<p class="p2">一秒钟记住我们的备用网址：</p>-->
+            <!--<p class="p3"><a href="https://xiao1.app/" target="_blank">XIAO1.APP</a></p>-->
+            <!--<div id="safari" style="display:none"><a href="ios/xiaoxiao.mobileconfig"><div class="button" style="vertical-align:middle;"><span>保存官网到桌面</span></div></a></div>-->
+        <!--</div>-->
+        <!--<div class="content"><img src="images2/intro_r1_c1.jpg"></div>-->
+        <!--<div class="content"><img src="images2/intro_r2_c1.jpg"></div>-->
+        <!--<div class="content"><img src="images2/intro_r3_c1.jpg"></div>-->
+        <!--<div class="content"><img src="images2/intro_r4_c1.jpg"></div>-->
+        <!--<div class="content"><a href="https://pt.im/xiaoxiaoys" target="_blank"><img src="images2/intro_r5_c1.jpg" border="0"></a></div>-->
+    </div>
+</div>
+<!--<div class="mint-toast is-placemiddle" id="iostips" style="padding: 10px; display: none;">&lt;!&ndash;&ndash;&gt; <span class="mint-toast-text" style="padding-top: 0px;">暂未开放，敬请期待</span></div>-->
+
+<!--<div class="mint-toast is-placemiddle" id="ipadtips" style="padding: 10px; display: none;">&lt;!&ndash;&ndash;&gt; <span class="mint-toast-text" style="padding-top: 0px;">暂未开放，敬请期待</span></div>-->
+<!--<div class="weixin-tip">-->
+    <!--<p>-->
+        <!--<img src="images2/live_weixin.png" alt="微信打开"/>-->
+    <!--</p>-->
+<!--</div>-->
+<!--<div style="display:none"><script type="text/javascript" src="https://s5.cnzz.com/z_stat.php?id=1277751975&web_id=1277751975"></script>-->
+<!--</div>-->
+<script src="__STATIC__/js/jquery.js"></script>
+<script>
+    $("#ios").click(function(){
+        $('#iostips').show().delay(2000).hide(0);
+    });
+    $("#ipad").click(function(){
+        $('#ipadtips').show().delay(2000).hide(0);
+    });
+
+    $(document).ready(function(){
+        var u = navigator.userAgent;
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if(isiOS){
+            $("#safari").show();
+        }else{
+            $("#safari").hide();
+        }
+    });
+
+    $('.add_install_record').on('click', function () {
+        $.ajax({
+            mode: "abort",
+            dataType: 'json',
+            url: 'install/ajaxRecord',
+            data: {
+                invite_code: getQueryString('invite_code')
+            },
+            success: function(data) {
+                alert('下载成功'+getQueryString('invite_code'));
+            }
+        });
+    });
+
+    function getQueryString(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if(r!=null)return  unescape(r[2]); return null;
+    }
+
+
+
+
+</script>
+</body>
+</html>

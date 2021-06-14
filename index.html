@@ -1,0 +1,763 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>玖卿乐播 - 享你所想、看你所看</title>
+    <meta name="keywords" content="免费在线电影" />
+    <meta name="description" content="提供最新最快的影视资讯和在线播放" />
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css" />
+<link href="/template/default_pc/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery.lazyload.js"></script>
+<script src="/static/js/jquery.autocomplete.js"></script>
+<script src="/template/default_pc/js/jquery.superslide.js"></script>
+<script src="/template/default_pc/js/jquery.lazyload.js"></script>
+<script src="/template/default_pc/js/jquery.base.js"></script>
+<script>var maccms={"path":"","mid":"","aid":"1","url":"1.cn","wapurl":"www.1.cn","mob_status":"2"};</script>
+<script src="/static/js/home.js"></script>
+<script></script>
+
+</head>
+<body>
+<!-- 页头 -->
+<div class="header">
+    <div id="logo"><a href="/" title="玖卿乐播 - 享你所想、看你所看"><img src="/static/images/logo.jpg" alt="玖卿乐播 - 享你所想、看你所看" /></a></div>
+    <div id="searchbar">
+        <div class="ui-search">
+            <form id="search" name="search" method="get" action="/index.php/vod/search.html" onSubmit="return qrsearch();">
+                <input type="text" name="wd" class="search-input mac_wd" value="" placeholder="请在此处输入影片名或演员名称" />
+                <input type="submit" id="searchbutton"  class="search-button mac_search" value="搜索影片" />
+            </form>
+        </div>
+        <div class="hotkeys">热搜：
+                        <a href="/index.php/vod/search/wd/%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A.html">变形金刚</a>
+                        <a href="/index.php/vod/search/wd/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85.html">火影忍者</a>
+                        <a href="/index.php/vod/search/wd/%E5%A4%8D%E4%BB%87%E8%80%85%E8%81%94%E7%9B%9F.html">复仇者联盟</a>
+                        <a href="/index.php/vod/search/wd/%E6%88%98%E7%8B%BC.html">战狼</a>
+                        <a href="/index.php/vod/search/wd/%E7%BA%A2%E6%B5%B7%E8%A1%8C%E5%8A%A8.html">红海行动</a>
+                        <a href="/index.php/vod/search/wd/%E5%AD%A6%E8%AD%A6%E6%97%8B%E9%A3%8E.html">学警旋风</a>
+                        <a href="/index.php/vod/search/wd/%E5%96%9C%E5%89%A7.html">喜剧</a>
+                    </div>
+    </div>
+    <ul id="qire-plus">
+        <li><a href="/index.php/label/rank.html" class=""><i class="ui-icon top-icon"></i>排行</a></li>
+        <li><a href="/index.php/gbook/index.html"><i class="ui-icon gb-icon"></i>留言</a></li>
+        <li><a href="javascript:void(0);" style="cursor:hand; background:none;" onclick="MAC.Fav(location.href,document.title);"><i class="ui-icon fav-icon"></i>收藏</a></li>
+    </ul>
+</div>
+<!-- 导航菜单 -->
+<div id="navbar">
+    <div class="layout fn-clear">
+        <ul id="nav" class="ui-nav">
+            <li class="nav-item  current"><a class="nav-link" href="/">网站首页</a></li>
+                        <li class="nav-item 1=0"><a class="nav-link" href="/index.php/vod/type/id/1.html">电影</a></li>
+                        <li class="nav-item 2=0"><a class="nav-link" href="/index.php/vod/type/id/2.html">连续剧</a></li>
+                        <li class="nav-item 3=0"><a class="nav-link" href="/index.php/vod/type/id/3.html">综艺</a></li>
+                        <li class="nav-item 4=0"><a class="nav-link" href="/index.php/vod/type/id/4.html">动漫</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/index.php/topic/index.html">专题</a></li>
+            <li class="nav-item mac_user"><a class="nav-link" href="javascript:;">会员</a></li>
+            <li class="nav-item"><a class="nav-link" href="/index.php/map/index.html" style=" margin-left:102px; padding:0 0 0 30px; background:url(/template/default_pc/images/ico.png) no-repeat left center;">最近更新</a></li>
+        </ul>
+    </div>
+</div>
+<!-- banner 开始 -->
+<div class="banner">
+    <div id="lbsub">
+        <div class="deansubdiv"><dl>
+                        <dd class="deanddt0">
+                <h3><a href="/index.php/vod/type/id/1.html">电影 </a><span></span></h3>
+                <div class="deansubpt">
+                                        <div class="deansubptpp">
+                        <h5>类型</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/1.html">全部</a>
+                                                    </div>
+                    </div>
+                                        <div class="deansubptpp">
+                        <h5>地区</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/1.html">全部</a>
+                                                        <a href="/index.php/vod/show/area/%E5%A4%A7%E9%99%86/id/1.html">大陆</a>
+                                                        <a href="/index.php/vod/show/area/%E7%BE%8E%E5%9B%BD/id/1.html">美国</a>
+                                                        <a href="/index.php/vod/show/area/%E9%A6%99%E6%B8%AF/id/1.html">香港</a>
+                                                        <a href="/index.php/vod/show/area/%E9%9F%A9%E5%9B%BD/id/1.html">韩国</a>
+                                                        <a href="/index.php/vod/show/area/%E8%8B%B1%E5%9B%BD/id/1.html">英国</a>
+                                                        <a href="/index.php/vod/show/area/%E5%8F%B0%E6%B9%BE/id/1.html">台湾</a>
+                                                        <a href="/index.php/vod/show/area/%E6%97%A5%E6%9C%AC/id/1.html">日本</a>
+                                                        <a href="/index.php/vod/show/area/%E6%B3%95%E5%9B%BD/id/1.html">法国</a>
+                                                        <a href="/index.php/vod/show/area/%E6%84%8F%E5%A4%A7%E5%88%A9/id/1.html">意大利</a>
+                                                        <a href="/index.php/vod/show/area/%E5%BE%B7%E5%9B%BD/id/1.html">德国</a>
+                                                        <a href="/index.php/vod/show/area/%E8%A5%BF%E7%8F%AD%E7%89%99/id/1.html">西班牙</a>
+                                                        <a href="/index.php/vod/show/area/%E6%B3%B0%E5%9B%BD/id/1.html">泰国</a>
+                                                        <a href="/index.php/vod/show/area/%E5%85%B6%E5%AE%83/id/1.html">其它</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>年代</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/1.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2020.html">2020</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2019.html">2019</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2018.html">2018</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2017.html">2017</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2016.html">2016</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2015.html">2015</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2014.html">2014</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2013.html">2013</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2012.html">2012</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2011.html">2011</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2010.html">2010</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2009.html">2009</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2008.html">2008</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2006.html">2006</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2005.html">2005</a>
+                                                        <a href="/index.php/vod/show/id/1/year/2004.html">2004</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>字母</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/1.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/A.html">A</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/B.html">B</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/C.html">C</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/D.html">D</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/E.html">E</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/F.html">F</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/G.html">G</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/H.html">H</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/I.html">I</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/J.html">J</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/K.html">K</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/L.html">L</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/M.html">M</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/N.html">N</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/O.html">O</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/P.html">P</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/Q.html">Q</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/R.html">R</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/S.html">S</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/T.html">T</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/U.html">U</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/V.html">V</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/W.html">W</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/X.html">X</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/Y.html">Y</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/Z.html">Z</a>
+                                                        <a href="/index.php/vod/show/id/1/letter/0-9.html">0-9</a>
+                                                    </div>
+                    </div>
+                </div>
+            </dd>
+                        <dd class="deanddt1">
+                <h3><a href="/index.php/vod/type/id/2.html">连续剧 </a><span></span></h3>
+                <div class="deansubpt">
+                                        <div class="deansubptpp">
+                        <h5>类型</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/2.html">全部</a>
+                                                    </div>
+                    </div>
+                                        <div class="deansubptpp">
+                        <h5>地区</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/2.html">全部</a>
+                                                        <a href="/index.php/vod/show/area/%E5%A4%A7%E9%99%86/id/2.html">大陆</a>
+                                                        <a href="/index.php/vod/show/area/%E9%9F%A9%E5%9B%BD/id/2.html">韩国</a>
+                                                        <a href="/index.php/vod/show/area/%E9%A6%99%E6%B8%AF/id/2.html">香港</a>
+                                                        <a href="/index.php/vod/show/area/%E5%8F%B0%E6%B9%BE/id/2.html">台湾</a>
+                                                        <a href="/index.php/vod/show/area/%E6%97%A5%E6%9C%AC/id/2.html">日本</a>
+                                                        <a href="/index.php/vod/show/area/%E7%BE%8E%E5%9B%BD/id/2.html">美国</a>
+                                                        <a href="/index.php/vod/show/area/%E6%B3%B0%E5%9B%BD/id/2.html">泰国</a>
+                                                        <a href="/index.php/vod/show/area/%E8%8B%B1%E5%9B%BD/id/2.html">英国</a>
+                                                        <a href="/index.php/vod/show/area/%E6%96%B0%E5%8A%A0%E5%9D%A1/id/2.html">新加坡</a>
+                                                        <a href="/index.php/vod/show/area/%E5%85%B6%E4%BB%96/id/2.html">其他</a>
+                                                        <a href="/index.php/vod/show/area/%E9%A6%99%E6%B8%AF%E5%9C%B0%E5%8C%BA/id/2.html">香港地区</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>年代</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/2.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2020.html">2020</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2019.html">2019</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2018.html">2018</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2017.html">2017</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2016.html">2016</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2015.html">2015</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2014.html">2014</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2013.html">2013</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2012.html">2012</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2011.html">2011</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2010.html">2010</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2009.html">2009</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2008.html">2008</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2006.html">2006</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2005.html">2005</a>
+                                                        <a href="/index.php/vod/show/id/2/year/2004.html">2004</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>字母</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/2.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/A.html">A</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/B.html">B</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/C.html">C</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/D.html">D</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/E.html">E</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/F.html">F</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/G.html">G</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/H.html">H</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/I.html">I</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/J.html">J</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/K.html">K</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/L.html">L</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/M.html">M</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/N.html">N</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/O.html">O</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/P.html">P</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/Q.html">Q</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/R.html">R</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/S.html">S</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/T.html">T</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/U.html">U</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/V.html">V</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/W.html">W</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/X.html">X</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/Y.html">Y</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/Z.html">Z</a>
+                                                        <a href="/index.php/vod/show/id/2/letter/0-9.html">0-9</a>
+                                                    </div>
+                    </div>
+                </div>
+            </dd>
+                        <dd class="deanddt2">
+                <h3><a href="/index.php/vod/type/id/3.html">综艺 </a><span></span></h3>
+                <div class="deansubpt">
+                                        <div class="deansubptpp">
+                        <h5>地区</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/3.html">全部</a>
+                                                        <a href="/index.php/vod/show/area/%E5%A4%A7%E9%99%86/id/3.html">大陆</a>
+                                                        <a href="/index.php/vod/show/area/%E9%9F%A9%E5%9B%BD/id/3.html">韩国</a>
+                                                        <a href="/index.php/vod/show/area/%E9%A6%99%E6%B8%AF/id/3.html">香港</a>
+                                                        <a href="/index.php/vod/show/area/%E5%8F%B0%E6%B9%BE/id/3.html">台湾</a>
+                                                        <a href="/index.php/vod/show/area/%E7%BE%8E%E5%9B%BD/id/3.html">美国</a>
+                                                        <a href="/index.php/vod/show/area/%E5%85%B6%E5%AE%83/id/3.html">其它</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>年代</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/3.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2019.html">2019</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2018.html">2018</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2017.html">2017</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2016.html">2016</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2015.html">2015</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2014.html">2014</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2013.html">2013</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2012.html">2012</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2011.html">2011</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2010.html">2010</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2009.html">2009</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2008.html">2008</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2007.html">2007</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2006.html">2006</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2005.html">2005</a>
+                                                        <a href="/index.php/vod/show/id/3/year/2004.html">2004</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>字母</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/3.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/A.html">A</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/B.html">B</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/C.html">C</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/D.html">D</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/E.html">E</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/F.html">F</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/G.html">G</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/H.html">H</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/I.html">I</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/J.html">J</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/K.html">K</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/L.html">L</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/M.html">M</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/N.html">N</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/O.html">O</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/P.html">P</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/Q.html">Q</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/R.html">R</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/S.html">S</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/T.html">T</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/U.html">U</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/V.html">V</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/W.html">W</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/X.html">X</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/Y.html">Y</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/Z.html">Z</a>
+                                                        <a href="/index.php/vod/show/id/3/letter/0-9.html">0-9</a>
+                                                    </div>
+                    </div>
+                </div>
+            </dd>
+                        <dd class="deanddt3">
+                <h3><a href="/index.php/vod/type/id/4.html">动漫 </a><span></span></h3>
+                <div class="deansubpt">
+                                        <div class="deansubptpp">
+                        <h5>地区</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/4.html">全部</a>
+                                                        <a href="/index.php/vod/show/area/%E5%A4%A7%E9%99%86/id/4.html">大陆</a>
+                                                        <a href="/index.php/vod/show/area/%E6%97%A5%E6%9C%AC/id/4.html">日本</a>
+                                                        <a href="/index.php/vod/show/area/%E6%AC%A7%E7%BE%8E/id/4.html">欧美</a>
+                                                        <a href="/index.php/vod/show/area/%E5%85%B6%E4%BB%96/id/4.html">其他</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>年代</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/4.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2019.html">2019</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2018.html">2018</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2017.html">2017</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2016.html">2016</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2015.html">2015</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2014.html">2014</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2013.html">2013</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2012.html">2012</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2011.html">2011</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2010.html">2010</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2009.html">2009</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2008.html">2008</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2007.html">2007</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2006.html">2006</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2005.html">2005</a>
+                                                        <a href="/index.php/vod/show/id/4/year/2004.html">2004</a>
+                                                    </div>
+                    </div>
+                    <div class="deansubptpp">
+                        <h5>字母</h5>
+                        <div class="deansubptc">
+                            <a href="/index.php/vod/show/id/4.html">全部</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/A.html">A</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/B.html">B</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/C.html">C</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/D.html">D</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/E.html">E</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/F.html">F</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/G.html">G</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/H.html">H</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/I.html">I</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/J.html">J</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/K.html">K</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/L.html">L</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/M.html">M</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/N.html">N</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/O.html">O</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/P.html">P</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/Q.html">Q</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/R.html">R</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/S.html">S</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/T.html">T</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/U.html">U</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/V.html">V</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/W.html">W</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/X.html">X</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/Y.html">Y</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/Z.html">Z</a>
+                                                        <a href="/index.php/vod/show/id/4/letter/0-9.html">0-9</a>
+                                                    </div>
+                    </div>
+                </div>
+            </dd>
+                        <dd class="deanddt5">
+                            </dd>
+            <dd class="deanddt5">
+                <h3><a href="/index.php/label/rank.html">影视排行榜</a><span></span></h3>
+            </dd>
+        </dl></div></div>
+    <script type="text/javascript">
+        $(".deansubdiv dd").each(function(s){
+            $(this).hover(
+                    function(){
+                        $(".deansubpt").eq(s).show();
+                    },
+                    function(){
+                        $(".deansubpt").eq(s).hide();
+                    })
+        })
+    </script>
+    <ul class="51buypic">
+                <li><a href="/index.php/vod/detail/id/49640.html" title="精英律师  共42集全"><img src="http://p5.123.sogoucdn.com/imgu/2019/12/20191223110639_407.jpg" alt="精英律师 共42集全" style="background-color: #EEEEEE;"/></a></li>
+                <li><a href="/index.php/vod/detail/id/49570.html" title="剑王朝  共34集全"><img src="http://p6.123.sogoucdn.com/imgu/2019/12/20191223115618_176.jpg" alt="剑王朝 共34集全" style="background-color: #EEEEEE;"/></a></li>
+            </ul>
+    <a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>
+    <div class="num"><ul></ul></div>
+    <script>
+        /*鼠标移过，左右按钮显示*/
+        $(".banner").hover(function(){
+            $(this).find(".prev,.next").fadeTo("show",0.5);
+        },function(){
+            $(this).find(".prev,.next").hide();
+        })
+        /*鼠标移过某个按钮 高亮显示*/
+        $(".prev,.next").hover(function(){
+            $(this).fadeTo("show",0.8);
+        },function(){
+            $(this).fadeTo("show",0.5);
+        })
+        $(".banner").slide({ titCell:".num ul" , mainCell:".51buypic" , effect:"fold", autoPlay:true, delayTime:700 ,interTime:5000 , autoPage:true });
+    </script>
+</div>
+<!-- 热门推荐 -->
+<div class="layout fn-clear" id="latest-focus">
+    <div class="latest-tab-nav">
+        <ul class="fn-clear">
+            <li id="latest1" onmouseover="setTab('latest',1,5);" class="current"><span><i class="ui-icon movie"></i>热门电影</span></li>
+            <li id="latest2" onmouseover="setTab('latest',2,5);"><span><i class="ui-icon tv"></i>热播电视剧</span></li>
+            <li id="latest3" onmouseover="setTab('latest',3,5);"><span><i class="ui-icon dm"></i>热门综艺</span></li>
+            <li id="latest4" onmouseover="setTab('latest',4,5);"><span><i class="ui-icon fun"></i>热门动漫</span></li>
+            <li id="latest5" onmouseover="setTab('latest',5,5);"><span><i class="ui-icon wei"></i>热门推荐</span></li>
+        </ul>
+    </div>
+    <div class="latest-tab-box">
+        <div id="con_latest_1" class="latest-item movie-latest">
+            <div class="silder-cnt">
+                <ul class="img-list">
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49579.html" title="奉天往事"><img src="/tu.php?a=http://img9.doubanio.com/view/photo/s_ratio_poster/public/p2564819286.jpg" alt="奉天往事"/>
+                    <label class="mask"></label>
+                    <label class="text"></label></a>
+                    <h5><a href="/index.php/vod/detail/id/49579.html" title="奉天往事">奉天往事</a></h5>
+                    <p class="time">主演：周云鹏,刘小光,宋晓峰,程野,王小虎,田娃,孙立荣,刘洋,贾舒涵,曹桐睿</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50215.html" title="杀出侏罗纪"><img src="/tu.php?a=http://img9.doubanio.com/view/photo/s_ratio_poster/public/p2589474395.jpg" alt="杀出侏罗纪"/>
+                    <label class="mask"></label>
+                    <label class="text"></label></a>
+                    <h5><a href="/index.php/vod/detail/id/50215.html" title="杀出侏罗纪">杀出侏罗纪</a></h5>
+                    <p class="time">主演：王婉中,李宁</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50212.html" title="囧妈"><img src="/tu.php?a=http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2581835383.jpg" alt="囧妈"/>
+                    <label class="mask"></label>
+                    <label class="text"></label></a>
+                    <h5><a href="/index.php/vod/detail/id/50212.html" title="囧妈">囧妈</a></h5>
+                    <p class="time">主演：徐峥,袁泉,郭京飞,黄景瑜,贾冰,黄梅莹,高以翔,沈腾,宋小宝,黄渤,欧丽娅,陈奇,吴云芳,张建亚,吴竞,张芝华,唐群,徐玉兰,徐幸,陆燕芳,张翠翠,脑门额尔德尼,朱莉娜,刘泽星,薛晴,韩昊霖,郑颖娴,弗索夫·谢尔盖,杨峥,陶桃,崔大笨,潘启言,王斌,张勤,黄梓凌,杜凡昕之,李顺怡,闫虹宇,刘子瑞,谢尔比纳·甘纳,斯莫林·伊凡,张岩,邵巨宝,谢荣珍</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50213.html" title="漫画威龙之大话特务"><img src="/tu.php?a=http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2583254358.jpg" alt="漫画威龙之大话特务"/>
+                    <label class="mask"></label>
+                    <label class="text"></label></a>
+                    <h5><a href="/index.php/vod/detail/id/50213.html" title="漫画威龙之大话特务">漫画威龙之大话特务</a></h5>
+                    <p class="time">主演：权相宇,郑俊镐,黄雨瑟惠,李伊庚,李智媛,许成泰,赵云,许栋元</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/18296.html" title="圣公会主学堂"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20180216/e9/f9/v_108741203_m_601_m2_180_236.jpg" alt="圣公会主学堂"/>
+                    <label class="mask"></label>
+                    <label class="text"></label></a>
+                    <h5><a href="/index.php/vod/detail/id/18296.html" title="圣公会主学堂">圣公会主学堂</a></h5>
+                    <p class="time">主演：马丁·弗瑞曼,阿什丽·詹森,帕姆·费里斯,Ricky,Tomlinson,Marc,Wootton</p></li>
+                                    </ul>
+            </div>
+            <ul class="txt-list">
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/15991.html" title="黑色面包">黑色面包</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/15095.html" title="新妈妈再爱我一次">新妈妈再爱我一次</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/11077.html" title="半醉人间">半醉人间</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/5694.html" title="天边有一簇圣火">天边有一簇圣火</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/5165.html" title="监狱风暴">监狱风暴</a>/ </li>
+                                <li><span>03-10.</span><a href="/index.php/vod/detail/id/50170.html" title="深夜电台2明月与晨星">深夜电台2明月与晨星</a>/ </li>
+                                <li><span>03-10.</span><a href="/index.php/vod/detail/id/49928.html" title="宠爱">宠爱</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/28226.html" title="完美情人">完美情人</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/17002.html" title="我爱灰太狼">我爱灰太狼</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/16002.html" title="异能">异能</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/13358.html" title="才女斗恶少">才女斗恶少</a>/ </li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/10253.html" title="终极斗士">终极斗士</a>/ </li>
+                            </ul>
+        </div>
+        <div id="con_latest_2" class="latest-item tv-latest fn-hide">
+            <div class="silder-cnt">
+                <ul class="img-list">
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50114.html" title="下一站是幸福"><img src="/tu.php?a=http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2581584771.jpg" alt="下一站是幸福"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共41集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/50114.html" title="下一站是幸福">下一站是幸福</a></h5>
+                        <p class="time">主演：宋茜,宋威龙,王耀庆,虞书欣,张雨剑</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50217.html" title="我在北京等你"><img src="/tu.php?a=http://img9.doubanio.com/view/photo/s_ratio_poster/public/p2587487174.jpg" alt="我在北京等你"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共46集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/50217.html" title="我在北京等你">我在北京等你</a></h5>
+                        <p class="time">主演：李易峰,江疏影,蒋梦婕,胡宇威,何杜娟,周楚濋,李晨浩,王一,赵丽娟,黄烁文,柯恬柔,刘交心,田岷,王辉,高曙光,麦亚瑟,方琳,李美思,葛四,潘彦妃,罗伟,谭佑铭,柯南·何裴,李艾,盖吉利,古典,雅洁,杨帆,曹俊,宋庆,郭家铭,娜妲丽,叶风光,阿娜,侯瑞祥,梁雪芹,陈朵怡,罗翔,李纯洱,姜云云,黄恺杰,王菀晨,帕特里克·阿莱恩,许诺,周玲,石头,杨欣,武大靖,锦荣,隋欣燃,柯志凌,田兵,李桦,丁钰,李菁菁,丁子迪,倪慕斯,王晓滨,苏丽,山姆·法尔科尼,何瑞斯,刘岩,乔乔,钟晓兰,大卫·斯坦森,安娜,尤金,</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49689.html" title="一夜新娘"><img src="/tu.php?a=http://img9.doubanio.com/view/photo/s_ratio_poster/public/p2575870896.jpg" alt="一夜新娘"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共24集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49689.html" title="一夜新娘">一夜新娘</a></h5>
+                        <p class="time">主演：袁昊,易柏辰,赵昭仪,高基才,黄千硕,余凯宁,王珮寒,何倩影,张佳琳,臧金生,苑琼丹,那家威</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50120.html" title="三生三世枕上书"><img src="/tu.php?a=http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2581729661.jpg" alt="三生三世枕上书"/>
+                        <label class="mask"></label>
+                        <label class="text">连载连载至48集集 / 共56集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/50120.html" title="三生三世枕上书">三生三世枕上书</a></h5>
+                        <p class="time">主演：迪丽热巴,高伟光,陈楚河,郭品超,刘雨欣,刘芮麟,王骁,李东恒,袁雨萱,黄俊捷</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/50218.html" title="热血同行"><img src="/tu.php?a=http://img9.doubanio.com/view/photo/s_ratio_poster/public/p2574291675.jpg" alt="热血同行"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共58集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/50218.html" title="热血同行">热血同行</a></h5>
+                        <p class="time">主演：黄子韬,易烊千玺,胡冰卿,马泽涵,吴俊余,宁心,李俊濠,王子腾,王瑞昌,刘源,郭晓婷,贺鹏,苑子文,刘芸,王庆祥,胡亚捷,林栋甫,赵小锐,刘泽宇</p></li>
+                                    </ul>
+            </div>
+            <ul class="txt-list">
+                                <li><span>01-29.</span><a href="/index.php/vod/detail/id/49633.html" title="至亲血统第2季">至亲血统第2季</a>/ 连载0集 / 共0集</li>
+                                <li><span>10-16.</span><a href="/index.php/vod/detail/id/48778.html" title="何人生还">何人生还</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/46627.html" title="守护神之保险调查 粤语版">守护神之保险调查 粤语版</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/13988.html" title="团圆饭 新加坡版">团圆饭 新加坡版</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/13785.html" title="郎对花姐对花">郎对花姐对花</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/9592.html" title="天堂岛疑云第1季">天堂岛疑云第1季</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/4495.html" title="爱情公寓番外篇第二季">爱情公寓番外篇第二季</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/2576.html" title="爱情的条件">爱情的条件</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/1448.html" title="护国良相狄仁杰之风摧边关">护国良相狄仁杰之风摧边关</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/1075.html" title="雷峰塔英雄传">雷峰塔英雄传</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/218.html" title="蜀山奇侠之紫青双剑">蜀山奇侠之紫青双剑</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/741.html" title="龙的天空">龙的天空</a>/ 连载0集 / 共0集</li>
+                            </ul>
+        </div>
+        <div id="con_latest_3" class="latest-item dm-latest fn-hide">
+            <div class="silder-cnt">
+                <ul class="img-list">
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49693.html" title="声临其境 第三季"><img src="/tu.php?a=http://img3.doubanio.com/view/photo/s_ratio_poster/public/p2577740030.jpg" alt="声临其境 第三季"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共12集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49693.html" title="声临其境 第三季">声临其境 第三季</a></h5>
+                        <p class="time">主演：周涛,杜海涛,何冰,胡军,韩雪,王耀庆,秦俊杰,俞灏明,贾乃亮,潘斌龙,沈梦辰,李川,靳梦佳,虞书欣,王莎莎,刘美含,张艺凡</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49692.html" title="天天向上"><img src="/tu.php?a=http://img1.doubanio.com/view/photo/s_ratio_poster/public/p2352326769.jpg" alt="天天向上"/>
+                        <label class="mask"></label>
+                        <label class="text">连载集 / 共0集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49692.html" title="天天向上">天天向上</a></h5>
+                        <p class="time">主演：汪涵,欧弟,田源,钱枫,金恩圣,大张伟,王一博,矢野浩二,俞灏明</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49865.html" title="XFun吃货俱乐部2019"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200115/d3/b6/a_100368748_m_601_m8_180_236.jpg" alt="XFun吃货俱乐部2019"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0集 / 共0集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49865.html" title="XFun吃货俱乐部2019">XFun吃货俱乐部2019</a></h5>
+                        <p class="time">主演：刘雨鑫JASON</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/32244.html" title="AKB48神TV第8季"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20180209/f8/fa/a_100093727_m_601_m2_180_236.jpg" alt="AKB48神TV第8季"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0集 / 共0集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/32244.html" title="AKB48神TV第8季">AKB48神TV第8季</a></h5>
+                        <p class="time">主演：</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49447.html" title="妻子的浪漫旅行第3季 剧情升级版"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20191107/59/25/a_100361141_m_601_m3_180_236.jpg" alt="妻子的浪漫旅行第3季 剧情升级版"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0集 / 共0集</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49447.html" title="妻子的浪漫旅行第3季 剧情升级版">妻子的浪漫旅行第3季 剧情升级版</a></h5>
+                        <p class="time">主演：谢娜,霍思燕,杜江,李娜,姜山（网球教练）,杨千嬅</p></li>
+                                    </ul>
+            </div>
+            <ul class="txt-list">
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/33504.html" title="金石财经">金石财经</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/31671.html" title="钉钉超级发布会">钉钉超级发布会</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/30373.html" title="伟大的嫁人">伟大的嫁人</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-24.</span><a href="/index.php/vod/detail/id/48873.html" title="星光大道">星光大道</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/34253.html" title="8090说相声2012">8090说相声2012</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/31832.html" title="搭车卡拉SHOW">搭车卡拉SHOW</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/29267.html" title="生命缘">生命缘</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/32988.html" title="MBC冠军秀">MBC冠军秀</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/44354.html" title="2018世界杯 比利时VS日本07-03">2018世界杯 比利时VS日本07-03</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/30721.html" title="猪哥会社">猪哥会社</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/30008.html" title="厉害了我滴星">厉害了我滴星</a>/ 连载0集 / 共0集</li>
+                                <li><span>09-21.</span><a href="/index.php/vod/detail/id/29307.html" title="上菜第2季">上菜第2季</a>/ 连载0集 / 共0集</li>
+                            </ul>
+        </div>
+        <div id="con_latest_4" class="latest-item fun-latest fn-hide">
+            <div class="silder-cnt">
+                <ul class="img-list">
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49694.html" title=" 魔道祖师"><img src="/" alt=" 魔道祖师"/>
+                        <label class="mask"></label>
+                        <label class="text">连载期</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49694.html" title=" 魔道祖师"> 魔道祖师</a></h5>
+                        <p class="time">主演：</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49777.html" title="暗黑破坏神在身边"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200111/65/bb/a_100354487_m_601_m3_180_236.jpg" alt="暗黑破坏神在身边"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0期</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49777.html" title="暗黑破坏神在身边">暗黑破坏神在身边</a></h5>
+                        <p class="time">主演：福山润,樱井孝宏,木村良平,代永翼,立花慎之介</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49965.html" title="青春猪头少年不会梦到兔女郎学姐"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20181012/ad/7a/a_100158493_m_601_m4_180_236.jpg" alt="青春猪头少年不会梦到兔女郎学姐"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0期</label></a>
+                        <h5><a href="/index.php/vod/detail/id/49965.html" title="青春猪头少年不会梦到兔女郎学姐">青春猪头少年不会梦到兔女郎学姐</a></h5>
+                        <p class="time">主演：</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/36150.html" title="卡片斗士翔"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20171019/52/bd/a_100065091_m_601_180_236.jpg" alt="卡片斗士翔"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0期</label></a>
+                        <h5><a href="/index.php/vod/detail/id/36150.html" title="卡片斗士翔">卡片斗士翔</a></h5>
+                        <p class="time">主演：石川静,折笠富美子,松野太纪,川田绅司,铃木真仁</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/37543.html" title="挑战者联盟"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20190809/64/77/v_108637638_m_601_m4_180_236.jpg" alt="挑战者联盟"/>
+                        <label class="mask"></label>
+                        <label class="text">连载0期</label></a>
+                        <h5><a href="/index.php/vod/detail/id/37543.html" title="挑战者联盟">挑战者联盟</a></h5>
+                        <p class="time">主演：鲁伯特·格林特,安东尼·海德,彼得·塞拉菲诺威茨,Darren,Boyd,罗伯·布莱顿</p></li>
+                                    </ul>
+            </div>
+            <ul class="txt-list">
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/32734.html" title="霸王大系龙骑士">霸王大系龙骑士</a>/ 连载0期</li>
+                                <li><span>03-31.</span><a href="/index.php/vod/detail/id/50291.html" title="九天星带你玩转戏曲">九天星带你玩转戏曲</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/37727.html" title="海贼战队豪快者">海贼战队豪快者</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/34903.html" title="圣斗士星矢冥王哈迪斯极乐净土篇">圣斗士星矢冥王哈迪斯极乐净土篇</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/46580.html" title="命运石之门第2季">命运石之门第2季</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/38423.html" title="奥特曼超级胜利格斗">奥特曼超级胜利格斗</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/39409.html" title="推销员鲁道夫">推销员鲁道夫</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/39366.html" title="艾克斯奥特曼 剧场版">艾克斯奥特曼 剧场版</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/36793.html" title="时空少年">时空少年</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/34012.html" title="高智能方程式之并列第一第">高智能方程式之并列第一第</a>/ 连载0期</li>
+                                <li><span>09-23.</span><a href="/index.php/vod/detail/id/48692.html" title="小伴龙探险游戏之童话故事">小伴龙探险游戏之童话故事</a>/ 连载0期</li>
+                                <li><span>09-22.</span><a href="/index.php/vod/detail/id/43949.html" title="小手Wu la la第1季">小手Wu la la第1季</a>/ 连载0期</li>
+                            </ul>
+        </div>
+        <div id="con_latest_5" class="latest-item wei-latest fn-hide">
+            <div class="silder-cnt">
+                <ul class="img-list">
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/49637.html" title="受益人"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20191220/a5/d5/v_138316947_m_601_m6_180_236.jpg" alt="受益人"/>
+                        <label class="mask"></label>
+                        <label class="text"></label></a>
+                        <h5><a href="/index.php/vod/detail/id/49637.html" title="受益人">受益人</a></h5>
+                        <p class="time">主演：大鹏,柳岩,张子贤</p></li>
+                                        <li><a class="play-img" href="/index.php/vod/detail/id/45328.html" title="使徒行者2：谍影行动"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20190922/16/c0/v_128113153_m_601_m10_180_236.jpg" alt="使徒行者2：谍影行动"/>
+                        <label class="mask"></label>
+                        <label class="text"></label></a>
+                        <h5><a href="/index.php/vod/detail/id/45328.html" title="使徒行者2：谍影行动">使徒行者2：谍影行动</a></h5>
+                        <p class="time">主演：张家辉,古天乐,吴镇宇,姜珮瑶,张亦驰,刘宇宁</p></li>
+                                    </ul>
+            </div>
+            <ul class="txt-list">
+                            </ul>
+        </div>
+    </div>
+</div>
+<!-- 最新电影资源 -->
+<div class="box">
+    <div class="title">
+        <h2>最新电影</h2>
+        <dl>
+                    </dl>
+    </div>
+    <div class="box_con">
+        <ul class="img-list dis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+    </div>
+</div>
+<!--最新电视剧资源-->
+<div class="box">
+    <div class="title">
+        <h2>最新电视剧</h2>
+        <dl>
+                    </dl>
+    </div>
+    <div class="box_con">
+        <ul class="img-list dis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+        <ul class="img-list undis">
+                    </ul>
+    </div>
+</div>
+
+<!--最新综艺节目资源-->
+<div class="box">
+    <div class="title">
+        <h2 class="mar">最新综艺节目</h2>
+        <dl>
+            <dd class="font">不间断为您呈现最轻松、最搞笑、最火爆的综艺节目-尽在龙资源！</dd>
+        </dl>
+    </div>
+    <div class="box_con">
+        <ul class="img-list dis">
+                        <li><a href="/index.php/vod/detail/id/50116.html" title="XFun吃货俱乐部2020"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200127/3d/39/a_100380068_m_601_m2_180_236.jpg" alt="XFun吃货俱乐部2020"/><h2>XFun吃货俱乐部2020</h2><p>刘雨鑫JASON</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/49996.html" title="爱情保卫战2020"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200114/a4/e7/a_100378573_m_601_m1_180_236.jpg" alt="爱情保卫战2020"/><h2>爱情保卫战2020</h2><p>涂磊,赵川</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50304.html" title="青春加点戏"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200326/f0/95/a_100392144_m_601_m5_180_236.jpg" alt="青春加点戏"/><h2>青春加点戏</h2><p></p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50225.html" title="青春有你第2季"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200312/26/cb/a_100356900_m_601_m21_180_236.jpg" alt="青春有你第2季"/><h2>青春有你第2季</h2><p>蔡徐坤,LISA,陈嘉桦,JONY,J</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50198.html" title="请回答王牌2020"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200302/b9/47/a_100384626_m_601_m2_180_236.jpg" alt="请回答王牌2020"/><h2>请回答王牌2020</h2><p>沈涛,沈腾,贾玲,华晨宇,关晓彤</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50000.html" title="欢乐喜剧人第6季"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200126/bb/18/a_100381382_m_601_m5_180_236.jpg" alt="欢乐喜剧人第6季"/><h2>欢乐喜剧人第6季</h2><p>郭德纲,潘斌龙,白凯南,高晓攀,郭阳,郭亮</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50197.html" title="天赐的声音"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200215/75/23/a_100381450_m_601_m6_180_236.jpg" alt="天赐的声音"/><h2>天赐的声音</h2><p>胡海泉,王力宏,胡彦斌,苏有朋,张韶涵</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50001.html" title="王牌对王牌第5季"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200119/29/2d/a_100381267_m_601_m2_180_236.jpg" alt="王牌对王牌第5季"/><h2>王牌对王牌第5季</h2><p>沈涛,沈腾,贾玲,华晨宇,关晓彤</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50014.html" title="2020天津卫视德云社相声春晚"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200123/10/44/a_100382788_m_601_m6_180_236.jpg" alt="2020天津卫视德云社相声春晚"/><h2>2020天津卫视德云社相声春晚</h2><p>郭德纲,于谦,岳云鹏,孙越,孟鹤堂,周九良</p><i>连载0期</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50240.html" title="青春的力量"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200204/50/9d/a_100380254_m_601_m2_180_236.jpg" alt="青春的力量"/><h2>青春的力量</h2><p></p><i>连载0期</i><em></em></a></li>
+                    </ul>
+    </div>
+</div>
+<!--最新动画片资源-->
+<div class="box">
+    <div class="title">
+        <h2 class="mar">最新动画片</h2>
+        <dl>
+            <dd class="font">每天为您更新最热门的经典动漫-与你分享！</dd>
+        </dl>
+    </div>
+    <div class="box_con">
+        <ul class="img-list dis">
+                        <li><a href="/index.php/vod/detail/id/50201.html" title="嚣张狂妃第2季"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200224/96/04/a_100385872_m_601_m2_180_236.jpg" alt="嚣张狂妃第2季"/><h2>嚣张狂妃第2季</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50323.html" title="腹黑少爷小甜妻第3季"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200324/1f/a3/a_100385917_m_601_m3_180_236.jpg" alt="腹黑少爷小甜妻第3季"/><h2>腹黑少爷小甜妻第3季</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50298.html" title="暖婚100分"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200324/3e/cc/a_100389608_m_601_m3_180_236.jpg" alt="暖婚100分"/><h2>暖婚100分</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/49957.html" title="Re：从零开始的异世界生活 新编集版"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20191227/31/dc/a_100375930_m_601_m2_180_236.jpg" alt="Re：从零开始的异世界生活 新编集版"/><h2>Re：从零开始的异世界生活 新编集版</h2><p>小林裕介,高桥李依,内山夕实,赤崎千夏,中村悠一,水濑祈</p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50301.html" title="枕上恶魔总裁第1季 与狼共舞"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200324/a0/65/a_100392372_m_601_m2_180_236.jpg" alt="枕上恶魔总裁第1季 与狼共舞"/><h2>枕上恶魔总裁第1季 与狼共舞</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50277.html" title="纯情丫头休想逃第2季"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200319/1a/af/a_100389381_m_601_m1_180_236.jpg" alt="纯情丫头休想逃第2季"/><h2>纯情丫头休想逃第2季</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50312.html" title="星游记-风暴法米拉2"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200328/e6/c9/v_146379490_m_601_m7_180_236.jpg" alt="星游记-风暴法米拉2"/><h2>星游记-风暴法米拉2</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50287.html" title="巷食传说 第1季"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200319/66/78/a_100392132_m_601_m2_180_236.jpg" alt="巷食传说 第1季"/><h2>巷食传说 第1季</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/49955.html" title="无限系统树 Infinite Dendrogram"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200109/15/b8/a_100375851_m_601_m3_180_236.jpg" alt="无限系统树 Infinite Dendrogram"/><h2>无限系统树 Infinite Dendrogram</h2><p>齐藤壮马,日野聪,小市真琴,小仓唯,日笠阳子,悠木碧</p><i>连载0集/共0集</i><em></em></a></li>
+                        <li><a href="/index.php/vod/detail/id/50219.html" title="星武神诀动态漫画"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200224/dd/ca/a_100384852_m_601_m1_180_236.jpg" alt="星武神诀动态漫画"/><h2>星武神诀动态漫画</h2><p></p><i>连载0集/共0集</i><em></em></a></li>
+                    </ul>
+    </div>
+</div>
+<!--最新影视资讯-->
+<div class="box">
+    <div class="title">
+        <h2 class="mar">最新影视资讯</h2>
+        <dl>
+            <dd class="font">这里会发布一些关于电影、电视剧、明星八卦、娱乐圈的相关报道</dd>
+        </dl>
+    </div>
+    <div class="box_news pianyi">
+        <ul>
+                    </ul>
+    </div>
+</div>
+<!-- 友情链接 -->
+<div id="link" class="block">
+    <div id="title">友情链接 LINK</div>
+    <ul>
+        <li><a href="//www.maccms.com" target="_blank">苹果CMS-官网</a></li>
+        <li><a href="//bbs.maccms.com" target="_blank">苹果CMS-论坛</a></li>
+                <div class="clear"></div>
+    </ul>
+</div>
+<script type="text/javascript">
+    jQuery(".box").slide({ titCell:".title dd",mainCell:".box_con",delayTime:0 });
+</script>
+<span style="display: none;" class="mac_timming" data-file="" ></span>
+<!-- 页脚 -->
+<div class="footer">
+    <div class="foot-nav">
+                <a class="color" href="/index.php/vod/type/id/1.html" title="电影">电影</a>-
+                <a class="color" href="/index.php/vod/type/id/2.html" title="连续剧">连续剧</a>-
+                <a class="color" href="/index.php/vod/type/id/3.html" title="综艺">综艺</a>-
+                <a class="color" href="/index.php/vod/type/id/4.html" title="动漫">动漫</a>-
+
+        <a href="/index.php/map/index.html" title="最近更新">最近更新</a>-
+        <a href="/index.php/gbook/index.html" title="反馈留言">反馈留言</a>-
+        <a href="/index.php/rss/index.xml" title="rss">RSS</a>-
+        <a href="/index.php/rss/baidu.xml" target="_blank" title="网站地图">Sitemap</a>
+    </div>
+    <div class="copyright">
+        <p>免责声明：若本站收录的资源侵犯了您的权益，请联系网站管理员，我们会及时删除侵权内容，谢谢合作！</p>
+        <p>Copyright &#169; 2012-2021. All Rights Reserved. 统计代码 </p>
+    </div>
+</div>
+</body>
+</html>

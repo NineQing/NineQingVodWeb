@@ -1,0 +1,1802 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>玖卿乐播 - 享你所想、看你所看</title>
+    <link href="/static/css/home.css" rel="stylesheet" type="text/css" />
+<link href="/template/default_pc/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/jquery.lazyload.js"></script>
+<script src="/static/js/jquery.autocomplete.js"></script>
+<script src="/template/default_pc/js/jquery.superslide.js"></script>
+<script src="/template/default_pc/js/jquery.lazyload.js"></script>
+<script src="/template/default_pc/js/jquery.base.js"></script>
+<script>var maccms={"path":"","mid":"","aid":"2","url":"1.cn","wapurl":"www.1.cn","mob_status":"2"};</script>
+<script src="/static/js/home.js"></script>
+<script></script>
+
+</head>
+<body>
+<!-- 页头 -->
+<div class="header">
+    <div id="logo"><a href="/" title="玖卿乐播 - 享你所想、看你所看"><img src="/static/images/logo.jpg" alt="玖卿乐播 - 享你所想、看你所看" /></a></div>
+    <div id="searchbar">
+        <div class="ui-search">
+            <form id="search" name="search" method="get" action="/index.php/vod/search.html" onSubmit="return qrsearch();">
+                <input type="text" name="wd" class="search-input mac_wd" value="" placeholder="请在此处输入影片名或演员名称" />
+                <input type="submit" id="searchbutton"  class="search-button mac_search" value="搜索影片" />
+            </form>
+        </div>
+        <div class="hotkeys">热搜：
+                        <a href="/index.php/vod/search/wd/%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A.html">变形金刚</a>
+                        <a href="/index.php/vod/search/wd/%E7%81%AB%E5%BD%B1%E5%BF%8D%E8%80%85.html">火影忍者</a>
+                        <a href="/index.php/vod/search/wd/%E5%A4%8D%E4%BB%87%E8%80%85%E8%81%94%E7%9B%9F.html">复仇者联盟</a>
+                        <a href="/index.php/vod/search/wd/%E6%88%98%E7%8B%BC.html">战狼</a>
+                        <a href="/index.php/vod/search/wd/%E7%BA%A2%E6%B5%B7%E8%A1%8C%E5%8A%A8.html">红海行动</a>
+                        <a href="/index.php/vod/search/wd/%E5%AD%A6%E8%AD%A6%E6%97%8B%E9%A3%8E.html">学警旋风</a>
+                        <a href="/index.php/vod/search/wd/%E5%96%9C%E5%89%A7.html">喜剧</a>
+                    </div>
+    </div>
+    <ul id="qire-plus">
+        <li><a href="/index.php/label/rank.html" class=""><i class="ui-icon top-icon"></i>排行</a></li>
+        <li><a href="/index.php/gbook/index.html"><i class="ui-icon gb-icon"></i>留言</a></li>
+        <li><a href="javascript:void(0);" style="cursor:hand; background:none;" onclick="MAC.Fav(location.href,document.title);"><i class="ui-icon fav-icon"></i>收藏</a></li>
+    </ul>
+</div>
+<!-- 导航菜单 -->
+<div id="navbar">
+    <div class="layout fn-clear">
+        <ul id="nav" class="ui-nav">
+            <li class="nav-item "><a class="nav-link" href="/">网站首页</a></li>
+                        <li class="nav-item 1=0"><a class="nav-link" href="/index.php/vod/type/id/1.html">电影</a></li>
+                        <li class="nav-item 2=0"><a class="nav-link" href="/index.php/vod/type/id/2.html">连续剧</a></li>
+                        <li class="nav-item 3=0"><a class="nav-link" href="/index.php/vod/type/id/3.html">综艺</a></li>
+                        <li class="nav-item 4=0"><a class="nav-link" href="/index.php/vod/type/id/4.html">动漫</a></li>
+                        <li class="nav-item "><a class="nav-link" href="/index.php/topic/index.html">专题</a></li>
+            <li class="nav-item mac_user"><a class="nav-link" href="javascript:;">会员</a></li>
+            <li class="nav-item"><a class="nav-link" href="/index.php/map/index.html" style=" margin-left:102px; padding:0 0 0 30px; background:url(/template/default_pc/images/ico.png) no-repeat left center;">最近更新</a></li>
+        </ul>
+    </div>
+</div>
+<!--当前位置-->
+<div class="bread-crumb-nav fn-clear">
+    <ul class="bread-crumbs">
+        <li class="home"><a href="index.html">首页</a></li>
+        <li>最近100个更新</li>
+        <li class="back"><a href="javascript:MAC.GoBack()">返回上一页</a></li>
+    </ul>
+</div>
+<!--列表部分-->
+<div class="ui-box ui-qire fn-clear" id="qire-lasted">
+    <div class="ui-title fn-clear">
+        <h2>最近100个更新</h2>
+        <div class="lasted-time fn-right">更新时间</div>
+        <div class="lasted-tags fn-right">标签</div>
+        <div class="lasted-type fn-right">类型</div>
+    </div>
+    <div class="ui-cnt">
+        <ul class="lasted-list fn-clear">
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50066.html">星际传奇3</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20191220/1c/49/v_62649103_m_601_m7_180_236.jpg" alt="星际传奇3" /></div>
+                    <dl>
+                        <dt>星际传奇3</dt>
+                        <dd><label>主演：</label>范·迪塞尔,卡尔·厄本,Katee,Sackhoff,博基姆·伍德拜因,戴夫·巴蒂斯塔,诺兰·杰拉德·冯克</dd>
+                        <dd><label>剧情：</label>在《星际传奇3》中，主人公瑞迪克被认为已死，并被独自撇在一个荒凉的外星星球上与三腿野牛和泥魔“做伴”，之后他意外卷入一场争夺之中，并和另外两组赏金猎人展开了竞争，其中有一组赏金猎人乘坐一种喷气轮状的火…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:53:46</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/1.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50196.html">夺宝惊魂</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20200224/69/5a/a_100387796_m_601_m3_180_236.jpg" alt="夺宝惊魂" /></div>
+                    <dl>
+                        <dt>夺宝惊魂</dt>
+                        <dd><label>主演：</label>边潇潇,马元,周舟,王亚彬</dd>
+                        <dd><label>剧情：</label>传说已久的青铜珍宝“商王钺”在相州出现，文物部门对此高度重视，境外文物走私组织也暗中觊觎，并派人潜入相州掠取，一时间，小城相州风云际会市公安局为保护国宝流失成立追缴重案组，女刑警周亚楠卧底相州，与境外…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:34:15</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50324.html">公子，我娶定你了</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200330/04/d6/a_100391530_m_601_m5_180_236.jpg" alt="公子，我娶定你了" /></div>
+                    <dl>
+                        <dt>公子，我娶定你了</dt>
+                        <dd><label>主演：</label>向涵之,邱士纶,柏程俊,陈樱丹,</dd>
+                        <dd><label>剧情：</label>叶小棠身为京城叶府千金，貌若天仙，却“屡嫁不爽”，天煞孤星的身世传说，让京城乞丐都避之不及！叶小棠不甘，重金做了花车，全城巡游征婚！新晋探花慕谨言进京履职打马经过，无意间接到从天而降的“聘礼”和美娇娘…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:34:01</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50264.html">远方的山楂树</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200313/c6/29/a_100392075_m_601_m3_180_236.jpg" alt="远方的山楂树" /></div>
+                    <dl>
+                        <dt>远方的山楂树</dt>
+                        <dd><label>主演：</label>吴其江,马藜,林家川,孙爽</dd>
+                        <dd><label>剧情：</label>二十世纪七十年代，一群北京知青在黑龙江的知青点结下深厚情谊，他们在返城、高考 、改革开放等一系列历史大潮中奋勇拼搏，走出了不同的人生轨迹主人公彭天翼为保护老科学家的毕生学术成果，含冤入狱。冤案平反后，…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:57</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50201.html">嚣张狂妃第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200224/96/04/a_100385872_m_601_m2_180_236.jpg" alt="嚣张狂妃第2季" /></div>
+                    <dl>
+                        <dt>嚣张狂妃第2季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>废材？丑女？不存在的—— 当所有人投以不屑与嘲讽的目光时，谁能料到，一个病怏怏的文弱少女的身体里，竟然装着一颗绝世仙尊的灵魂， 胎记一除，瞬间甩什么天下第一美女一百多条街！神器一开，别人花三四十年修炼…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:50</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50323.html">腹黑少爷小甜妻第3季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200324/1f/a3/a_100385917_m_601_m3_180_236.jpg" alt="腹黑少爷小甜妻第3季" /></div>
+                    <dl>
+                        <dt>腹黑少爷小甜妻第3季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>又哑又瘫的豪门弃子，遇上“小天使”未婚妻，当然是坑蒙拐骗抱回家了！直到被拆骨入腹，小天使才发现，他原来是一只披着羊皮的狼！这是一个腹黑少爷“扮猪吃老虎”，一步步套路小娇妻的暖萌故事………</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:47</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50116.html">XFun吃货俱乐部2020</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200127/3d/39/a_100380068_m_601_m2_180_236.jpg" alt="XFun吃货俱乐部2020" /></div>
+                    <dl>
+                        <dt>XFun吃货俱乐部2020</dt>
+                        <dd><label>主演：</label>刘雨鑫JASON</dd>
+                        <dd><label>剧情：</label>《XFun吃货俱乐部》，是由旅行美食达人刘雨鑫JASON主持的一部充满正能量的美食、旅游大片我们带你用不同的视角玩转每一个国家，寻找当地最美味的美味！如果你还没勇气自由行，你还头疼在国外找美味，那就让…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:47</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50322.html">不完美的她</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200327/07/50/a_100392301_m_601_m4_180_236.jpg" alt="不完美的她" /></div>
+                    <dl>
+                        <dt>不完美的她</dt>
+                        <dd><label>主演：</label>周迅,黄觉,惠英红,赵雅芝,金士杰,曲高位</dd>
+                        <dd><label>剧情：</label>《不完美的她》以独立女性为视角，讲述了林绪之凭借心中的爱与光亮，在黑暗中寻找光明，守护希望，温暖治愈、感动人心的女性“自我救赎”的故事…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:42</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50298.html">暖婚100分</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200324/3e/cc/a_100389608_m_601_m3_180_236.jpg" alt="暖婚100分" /></div>
+                    <dl>
+                        <dt>暖婚100分</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>世界上可能没有比布桐更惨的人了，绿帽子一戴就是两顶——她没有公开的未婚夫厉家少爷历思源和她的女朋友搞在了一起！明明知道厉家少爷贪图的就是他们布家的财产，但与历家老爷子交情深厚的爷爷却无论如何不同意…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:42</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49996.html">爱情保卫战2020</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200114/a4/e7/a_100378573_m_601_m1_180_236.jpg" alt="爱情保卫战2020" /></div>
+                    <dl>
+                        <dt>爱情保卫战2020</dt>
+                        <dd><label>主演：</label>涂磊,赵川</dd>
+                        <dd><label>剧情：</label>爱情保卫战2020，节目把现实中青年男女在恋爱过程中遇到的各种困惑与矛盾搬上舞台，双方通过交流、沟通与争辩把内心的痛苦与困惑全盘托出节目现场邀请情感导师为情侣提供理性分析、科学考量、恋爱指导和情感忠告…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:40</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49957.html">Re：从零开始的异世界生活 新编集版</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20191227/31/dc/a_100375930_m_601_m2_180_236.jpg" alt="Re：从零开始的异世界生活 新编集版" /></div>
+                    <dl>
+                        <dt>Re：从零开始的异世界生活 新编集版</dt>
+                        <dd><label>主演：</label>小林裕介,高桥李依,内山夕实,赤崎千夏,中村悠一,水濑祈</dd>
+                        <dd><label>剧情：</label>在从便利商店回家的路上，突然被异世界召唤的少年菜月昴在无法依靠任何东西的异世界，无力的少年手唯一的力量……那是“死去然后重新开始”的力量。为了守护最重要的人们，为了取回确实存在着又无可替代的时间，少年…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:37</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50149.html">无心法师3</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200309/bd/eb/a_100260626_m_601_m6_180_236.jpg" alt="无心法师3" /></div>
+                    <dl>
+                        <dt>无心法师3</dt>
+                        <dd><label>主演：</label>韩东君,陈瑶,隋栐良,丁桥,檀健次,牛骏峰</dd>
+                        <dd><label>剧情：</label>《无心法师3》是根据尼罗的同名作品改编而来的一部民国玄幻电视剧该剧剧情相当于第一部的前传，故事背景放在盛唐。主要讲述了无心一心求死之时，邂逅了神秘的柳家姐弟，与英武果决的姐姐青鸾、孱弱腹黑的玄鹄联手解…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:34</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50301.html">枕上恶魔总裁第1季 与狼共舞</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200324/a0/65/a_100392372_m_601_m2_180_236.jpg" alt="枕上恶魔总裁第1季 与狼共舞" /></div>
+                    <dl>
+                        <dt>枕上恶魔总裁第1季 与狼共舞</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>遇上冉未庭，带给她这辈子最为阴森恐怖的记忆他爱她，用尽一切暴虐手段让她乖乖听话，从深情到毁灭；她惧他，用尽全部智慧只求逃离他的囚牢，从反抗到绝望。 他爱她，用尽一切手段帮助她获得自由，以身犯险也在所不…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:31</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50321.html">渡念师上</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200331/34/8e/v_146057949_m_601_m4_180_236.jpg" alt="渡念师上" /></div>
+                    <dl>
+                        <dt>渡念师上</dt>
+                        <dd><label>主演：</label>钟骏胜,林琪,赵杰,(台湾演员),苏濛濛</dd>
+                        <dd><label>剧情：</label>麦辉和庄梦依是一对夫妻档搭档，作为专业渡念师为客户解决心灵困扰，某日接到一个神秘邀请，渡念师夫妇陷入了恐怖小说作家七宝设下的求助迷局意识到事态复杂后，渡念师夫妇决定追根究底，探查真相，不曾想却越陷越深…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:30</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50277.html">纯情丫头休想逃第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200319/1a/af/a_100389381_m_601_m1_180_236.jpg" alt="纯情丫头休想逃第2季" /></div>
+                    <dl>
+                        <dt>纯情丫头休想逃第2季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>江城商界精英纪君阳被敌家陷害，遭遇车祸双目失明情绪崩溃之际，被一位年轻的神秘女子救下。女子帮他慢慢恢复，他也爱上了这位女子，他不知道女子的名字，便唤她“丫头”。怎料在重获光明的第一天，丫头突然消失不见…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:21</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50184.html">猎心者</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200309/d2/c1/a_100291310_m_601_m9_180_236.jpg" alt="猎心者" /></div>
+                    <dl>
+                        <dt>猎心者</dt>
+                        <dd><label>主演：</label>李佳航,王玥兮,陈希郡,盛朗熙,卞涛,薛景瑞</dd>
+                        <dd><label>剧情：</label>天才微反应分析专家戴猛因工作失误辞去公职，开设了一家事务所，专替他人“摆平”各类事件，如私下协助委托人解决情感、债务、职场等纠纷，除了刑事案件，只要不违法，什么活都接戴猛凭借微反应心理分析的技术专长，…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:21</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50280.html">绿水青山带笑颜</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20200319/8a/26/a_100393500_m_601_m4_180_236.jpg" alt="绿水青山带笑颜" /></div>
+                    <dl>
+                        <dt>绿水青山带笑颜</dt>
+                        <dd><label>主演：</label>杨烁,潘之琳,于洋（主持人）,马苏,刘流,辛雨锡</dd>
+                        <dd><label>剧情：</label>32岁的许晗在上海工作了八年，他疲惫不堪，想回老家，到乡下找老同学沈欢歌，偶遇杜笑语，并一见钟情沈欢歌已经暗恋杜笑语十年，杜笑语决定辞职回家开办农场，许晗觉得办民宿不错就租下了杜笑语家的老房子，开办起…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:18</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50304.html">青春加点戏</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200326/f0/95/a_100392144_m_601_m5_180_236.jpg" alt="青春加点戏" /></div>
+                    <dl>
+                        <dt>青春加点戏</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>《青春加点戏》是一档沉浸式角色体验剧情真人秀节目将以绝不烧脑的华美剧本主题展开剧情演绎，青春训练生变身主题角色，以玩家身份入戏、以自己的真实名字和性格加持角色、以真实的她们赋予角色鲜活的个性，更在NP…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:33:17</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50312.html">星游记-风暴法米拉2</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200328/e6/c9/v_146379490_m_601_m7_180_236.jpg" alt="星游记-风暴法米拉2" /></div>
+                    <dl>
+                        <dt>星游记-风暴法米拉2</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>在广阔的宇宙中，存在着一条极度危险的虫洞航线——魔鬼脚印 为了阻止其他人进入魔鬼脚印，神秘组织银河眼封锁了可以到达那里的坐标，魔鬼脚印渐 渐从人们的视野中消失。而唯一可以进入魔鬼脚印的飞船引擎“朱庇特…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:32:58</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50309.html">民国奇探</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200326/02/15/a_100331911_m_601_m9_180_236.jpg" alt="民国奇探" /></div>
+                    <dl>
+                        <dt>民国奇探</dt>
+                        <dd><label>主演：</label>胡一天,张云龙,肖燕,张会中,曾泳醍,向云龙</dd>
+                        <dd><label>剧情：</label>民国十四年以后，从英国留学归来的纨绔公子路垚（胡一天饰）凭借其超高智商和推理能力，被身手不凡的巡捕房探长乔楚生（张云龙饰）邀请做探案顾问，之后二人又携手正义感爆棚的女记者白幼宁（肖燕饰）组成侦探小分队…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:32:47</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50225.html">青春有你第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200312/26/cb/a_100356900_m_601_m21_180_236.jpg" alt="青春有你第2季" /></div>
+                    <dl>
+                        <dt>青春有你第2季</dt>
+                        <dd><label>主演：</label>蔡徐坤,LISA,陈嘉桦,JONY,J</dd>
+                        <dd><label>剧情：</label>延续《青春有你》IP，原班团队打造，2020年Q1爱奇艺S级自制综艺《青春有你》第二季模式全新升级，赛制更加激烈有趣，青春制作人代表和导师团阵营将带领109位女生开启全新的青春拼搏之旅，传播更多社会正…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:32:45</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50320.html">鬼吹灯之龙岭迷窟</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200402/a6/ee/v_146074814_m_601_m7_180_236.jpg" alt="鬼吹灯之龙岭迷窟" /></div>
+                    <dl>
+                        <dt>鬼吹灯之龙岭迷窟</dt>
+                        <dd><label>主演：</label>林雨申,康宁</dd>
+                        <dd><label>剧情：</label>传闻龙岭迷窟中出土过龙骨异文，Shirley杨前往调查遇到胡八一等人，在幽灵空冢一探究竟，胡八一询问红斑之事，Shirley杨道出当年鹧鸪哨的故事自精绝古城回来Shirley杨带陈教授回美国治疗，发现…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:32:42</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50282.html">如果岁月可回头</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200309/60/3b/a_100164995_m_601_m3_180_236.jpg" alt="如果岁月可回头" /></div>
+                    <dl>
+                        <dt>如果岁月可回头</dt>
+                        <dd><label>主演：</label>靳东,蒋欣,李宗翰,李乃文,左小青,赵子琪</dd>
+                        <dd><label>剧情：</label>同一个城市中，三个彼此陌生的家庭都出事了，三个婚姻失败的家庭孤独无助难以自拔，不约而同想换 个活法，逃避现实生活的残酷一个有着一段风雨过去的女人介入了他们的颠覆，等待他们的是无尽的未知，疯狂玩乐代孕艳…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 22:32:41</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50319.html">18899</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/" alt="18899" /></div>
+                    <dl>
+                        <dt>18899</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 10:13:32</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/id/2.html' target='_blank'></a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49960.html">僵尸至尊</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20191125/17/b0/v_107287404_m_601_m5_180_236.jpg" alt="僵尸至尊" /></div>
+                    <dl>
+                        <dt>僵尸至尊</dt>
+                        <dd><label>主演：</label>林正英,钱小豪,吴家丽,刘洵,黄斌</dd>
+                        <dd><label>剧情：</label>七月十五，鬼门大开，孤魂野鬼游荡人间茅山道长九叔（林正英饰）精心准备鬼月所需祭品，而顽皮的二徒弟文才却跑去看鬼戏。文才懵懂，不只身旁已聚满群鬼，更有貌美如画的女鬼小丽（吴家丽饰）将其相中。九叔命大徒弟…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-02 00:01:47</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-02</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50275.html">善良医生 日版</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200213/4c/62/a_100384660_m_601_m3_180_236.jpg" alt="善良医生 日版" /></div>
+                    <dl>
+                        <dt>善良医生 日版</dt>
+                        <dd><label>主演：</label>山崎贤人,上野树里,藤木直人,户次重幸</dd>
+                        <dd><label>剧情：</label>新堂凑拥有令人惊异的默记和空间认知能力，同时又是个患有交流障碍的自闭症患者受儿科医生司贺明的影响，阿凑从小时候起就梦想成为儿科医生。终于，他凭借默记能力背下了大量医书，从医科毕业，通过了医师资格考试。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:48</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/2.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49891.html">相对宇宙第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200113/bf/fd/a_100114903_m_601_m4_180_236.jpg" alt="相对宇宙第1季" /></div>
+                    <dl>
+                        <dt>相对宇宙第1季</dt>
+                        <dd><label>主演：</label>J·K·西蒙斯,Olivia,Williams,哈里·劳埃德,乌尔里奇·汤姆森,纳赞宁·波妮阿蒂</dd>
+                        <dd><label>剧情：</label>Olivia Williams及Harry Lloyd加盟Starz科幻剧《相对宇宙 Counterpart》，与JK Simmons共演该剧由Morten Tyldum当执行制片及执导首集，于15…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:44</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/2.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50186.html">幸福敲了两次门</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200228/61/76/a_100389070_m_601_m4_180_236.jpg" alt="幸福敲了两次门" /></div>
+                    <dl>
+                        <dt>幸福敲了两次门</dt>
+                        <dd><label>主演：</label>张静静,洪小铃,曹海军,李颖,孙大川,艾东</dd>
+                        <dd><label>剧情：</label>梅雅婷和罗楠楠是一对好友，梅雅婷是养老院的护理员，而罗楠楠却是小学一年级的班主任她俩在各自的工作单位一个管老的，一个管小的，成天忙得头昏眼花，而下班回家除了老人孩子，还要多管一个丈夫。偏是两位的丈夫都…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:32</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50273.html">法网追击</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200316/50/6b/a_100392893_m_601_m2_180_236.jpg" alt="法网追击" /></div>
+                    <dl>
+                        <dt>法网追击</dt>
+                        <dd><label>主演：</label>朱研,及晓龙,高海鹏</dd>
+                        <dd><label>剧情：</label>故事发生在北方小城南石市，为了维护法律正义，公安局廖芳华将以薛风、萧琳、鲇鱼头、王泉为首的犯罪团伙抓进了监狱，临近公审，薛风却在转移监舍时被刺，鲇鱼头在越狱时被触电，只有萧琳因为怀孕不适合羁押，不得不…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:23</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50287.html">巷食传说 第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200319/66/78/a_100392132_m_601_m2_180_236.jpg" alt="巷食传说 第1季" /></div>
+                    <dl>
+                        <dt>巷食传说 第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>现代都市的一条小巷里，“巷食”小店悄然开业了在这个致力于贩售中华正宗街头小吃的店里，彭老板和他的猫，作为店内唯二的生物肩负起了经营整个餐厅的责任。身为中华美食鼻祖“彭祖”的传人，彭老板外表平平无奇，却…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:20</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50188.html">少主且慢行第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200228/46/c3/a_100385942_m_601_m10_180_236.jpg" alt="少主且慢行第1季" /></div>
+                    <dl>
+                        <dt>少主且慢行第1季</dt>
+                        <dd><label>主演：</label>虞书欣,刘奕畅,骆明劼,陈昊蓝</dd>
+                        <dd><label>剧情：</label>讲述从小生长在桃源城的村落的断案女子田三七，一直在等待自己的童年之约之人18岁这年决心出去寻找童年的小哥哥，来到了桃源城南府发下了很像自己要找的人的赵错，二人在欢闹中破了城中的各种案件，抓住了坏人。而…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:20</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49955.html">无限系统树 Infinite Dendrogram</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200109/15/b8/a_100375851_m_601_m3_180_236.jpg" alt="无限系统树 Infinite Dendrogram" /></div>
+                    <dl>
+                        <dt>无限系统树 Infinite Dendrogram</dt>
+                        <dd><label>主演：</label>齐藤壮马,日野聪,小市真琴,小仓唯,日笠阳子,悠木碧</dd>
+                        <dd><label>剧情：</label>无限的冒险，如今拉开序幕——根据每位玩家的不同行为以及性格，游戏习惯等进化为具备独特能力的系统装载了如此极具梦想的系统，全方位体感VRMMO〈Infinite Dendrogram〉，在面世一瞬间便…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:33:04</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50219.html">星武神诀动态漫画</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200224/dd/ca/a_100384852_m_601_m1_180_236.jpg" alt="星武神诀动态漫画" /></div>
+                    <dl>
+                        <dt>星武神诀动态漫画</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>千百年前，妖帝被人族强者所伤，灵魂逃逸，强行夺舍寄居于人族帝王的身上，从此之后，帝国战乱不断，忠臣离心在这乱世之中，蓝鲤镇的叶氏家族，更是受尽欺凌苦难。叶氏宗族子弟叶星河身负族人希望，开启了星武传承，…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:32:48</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50025.html">地缚少年花子君</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20191227/20/c0/a_100375860_m_601_m2_180_236.jpg" alt="地缚少年花子君" /></div>
+                    <dl>
+                        <dt>地缚少年花子君</dt>
+                        <dd><label>主演：</label>绪方惠美,鬼头明里,千叶翔也,内田雄马</dd>
+                        <dd><label>剧情：</label>海鸥学园的奇妙传言之一据说旧校舍三层女厕所的第三间里的同学，会实现前来拜访者的愿望。非常喜欢巫术等超自然现象的少女八寻宁宁为了实现自己的愿望，将之托付给了学园怪谈………</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:32:33</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50074.html">万渣朝凰</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200207/76/f8/a_100381697_m_601_m1_180_236.jpg" alt="万渣朝凰" /></div>
+                    <dl>
+                        <dt>万渣朝凰</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>女主苏绿夏绑定女配逆袭系统，穿越千万小世界，凭借非凡演技吊打一个个渣男贱女的现世报故事 苏绿夏：“能慰藉我的，只有渣男悔恨的泪水，和她们求而不得的痛苦呻吟。” 系统：“今天我的宿主做人了吗？没有。”…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-04-01 22:32:24</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-04-01</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50291.html">九天星带你玩转戏曲</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20200320/57/fe/a_100392055_m_601_m2_180_236.jpg" alt="九天星带你玩转戏曲" /></div>
+                    <dl>
+                        <dt>九天星带你玩转戏曲</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>戏曲小精灵九天星和共享娃娃是两个富有强烈的好奇心和探索精神的小伙伴，两人结伴游历了中国各个省市，见识到了种类繁多的戏曲剧种，她们穿越到一个个经典戏曲故事当中，探索中国传统戏曲文化的奥秘九天星活泼可爱，…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:33:17</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50259.html">蝶影重重</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20200220/b0/b1/a_100380598_m_601_m2_180_236.jpg" alt="蝶影重重" /></div>
+                    <dl>
+                        <dt>蝶影重重</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>她，冷宫弃妃，表面无能，却是事事掌握在手中他，南国质子，表面怯懦，实则高深莫测。俩人因食物相识，却也相爱着。宫廷之争，皇后担心她翻身，处处针对。众妃子，美人也到冷宫闹，一场鬼戏的上演，停止了风波，却被…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:33:08</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50297.html">从此王爷不早朝第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200324/36/52/a_100390093_m_601_m1_180_236.jpg" alt="从此王爷不早朝第1季" /></div>
+                    <dl>
+                        <dt>从此王爷不早朝第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>一人之下万人之上的堂堂湛王，竟然搞不定一个小丫头，哼！掀桌！马上给本王把京城最畅销的本子拿来，本王就不信点满365种姿势，这丫头不拜倒在我的石榴裙啊呸裤衩下！…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:33:04</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50318.html">坐在我身后的女孩</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200330/9c/ca/v_146500125_m_601_m3_180_236.jpg" alt="坐在我身后的女孩" /></div>
+                    <dl>
+                        <dt>坐在我身后的女孩</dt>
+                        <dd><label>主演：</label>任宇航,陈柯颖</dd>
+                        <dd><label>剧情：</label>在我们的学生时代，似乎都会有个喜欢趴玻璃的班主任，时而严厉，时而慈祥，嘴上不断提及我们是他教过的最差的一级，会有一个交情过硬的兄弟，替我出头，为我解忧，当然也会有一个在自己的心中留下过深刻印象的女孩，…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:33:01</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49959.html">魔王新娘太难了 第1季 怼上大魔王</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200108/b8/15/a_100378469_m_601_m2_180_236.jpg" alt="魔王新娘太难了 第1季 怼上大魔王" /></div>
+                    <dl>
+                        <dt>魔王新娘太难了 第1季 怼上大魔王</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>魔族魔王给四位魔族少主下令，谁能够找到最后的除魔师后代并且和她结婚，就是下一任魔王，四位少主为了各自的目的，来到人类校园另一方面，为了夺回母亲的手链，叶知暖得罪了一个大魔王，还背负上了巨额债款。被…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:32:50</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50317.html">爆烈之城</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200331/6a/9a/v_146241785_m_601_m3_180_236.jpg" alt="爆烈之城" /></div>
+                    <dl>
+                        <dt>爆烈之城</dt>
+                        <dd><label>主演：</label>李龙君,张倩如,周骏（演员）,金九熹,张永华,侯磊</dd>
+                        <dd><label>剧情：</label>退役国际刑警专家陆飞，结婚前夕遭遇未婚妻苏曼的不辞而别路飞在寻找的过程中，从机场监控视频看到苏曼登机飞往东南亚A国，可机场信息显示该女子并不叫苏曼。路飞心中疑窦重重，为追寻真相追踪到东南亚A国首都。陆…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:32:46</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50042.html">肥龙过江</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200201/1a/93/v_115489579_m_601_m11_180_236.jpg" alt="肥龙过江" /></div>
+                    <dl>
+                        <dt>肥龙过江</dt>
+                        <dd><label>主演：</label>甄子丹,毛舜筠,周丽淇,王晶,林秋楠</dd>
+                        <dd><label>剧情：</label>港警察朱福龙(甄子丹 饰)因一次工作失误惨被降级，万般无奈之际又遭未婚妻可儿(周励淇 饰)悔婚，事业爱情的双重打击令他一蹶不振，暴饮暴食六个月后体重猛增到200斤!上司黄警官不忍其继续堕落，委派朱福龙…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:32:18</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50036.html">斗破苍穹动态漫画第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200115/82/5b/a_100380504_m_601_m2_180_236.jpg" alt="斗破苍穹动态漫画第2季" /></div>
+                    <dl>
+                        <dt>斗破苍穹动态漫画第2季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>天才少年萧炎在创造了家族空前绝后的修炼纪录后突然成了废人，种种打击接踵而至就在他即将绝望的时候，一缕灵魂从他手上的戒指里浮现，一扇全新的大门在面前开启，经过艰苦修炼最终成就辉煌的故事。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-31 22:32:14</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-31</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49909.html">创业公司第3季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200114/e8/aa/a_100215582_m_601_m1_180_236.jpg" alt="创业公司第3季" /></div>
+                    <dl>
+                        <dt>创业公司第3季</dt>
+                        <dd><label>主演：</label>亚当·布罗迪,艾迪·盖瑟吉,Addison,Timlin,米拉·索维诺,朗·普尔曼,泰勒·莱伯恩</dd>
+                        <dd><label>剧情：</label>第三季将重点描述主人公与美国政府周旋的故事——面对政府的调查和围追堵截，暗网原型ArakNet的创造者要作何选择？Mira Sorvino本季扮演美国国家安全局特工Rebecca Stroud，负责调…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:39:43</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/2.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49908.html">创业公司第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200120/cd/49/a_100129623_m_601_m2_180_236.jpg" alt="创业公司第2季" /></div>
+                    <dl>
+                        <dt>创业公司第2季</dt>
+                        <dd><label>主演：</label>Adam,Brody,艾迪·盖瑟吉,朗·普尔曼,Martin,Freeman,珍妮·加戈</dd>
+                        <dd><label>剧情：</label>Rask owes the Russian gang behind GenCoin, while Izzy deals with the death of her sister and her fam…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:39:26</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/2.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50204.html">凪的新生活</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20200217/30/7b/a_100346950_m_601_m3_180_236.jpg" alt="凪的新生活" /></div>
+                    <dl>
+                        <dt>凪的新生活</dt>
+                        <dd><label>主演：</label>黑木华,高桥一生,中村伦也,市川实日子,藤本泉,水谷果穂</dd>
+                        <dd><label>剧情：</label>日本人气漫画《风平浪静的闲暇》也要真人化了，今日TBS电视台宣布，演技派女优黑木华即将出演真人版《风平浪静的闲暇》剧集 　　《风平浪静的闲暇》的主角是一位28岁的职场女性，性格老好人的她在东京一家公…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:38:38</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/2.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50316.html">我们这一天第3季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200319/ff/ad/a_100369392_m_601_m1_180_236.jpg" alt="我们这一天第3季" /></div>
+                    <dl>
+                        <dt>我们这一天第3季</dt>
+                        <dd><label>主演：</label>米洛·文堤米利亚,Mandy,Moore,斯特尔林·K布朗,克丽丝·梅斯,贾斯汀·哈特雷,苏珊·卡莱布·沃森</dd>
+                        <dd><label>剧情：</label>NBC剧集《我们这一天》宣布一次性续订2、3季，这部Dan Fogelman打造的大热剧是这个秋季档收视人数第二的广播网剧情剧新续订的两季还是每季18集。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:38:29</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/2.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50200.html">一路向暖第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200204/ba/94/a_100381887_m_601_m3_180_236.jpg" alt="一路向暖第2季" /></div>
+                    <dl>
+                        <dt>一路向暖第2季</dt>
+                        <dd><label>主演：</label>范晓东,苏梦芸,李九霖,叶蓁,张欢,郭迦南</dd>
+                        <dd><label>剧情：</label>新锐画家温浅被酒吧驻唱乐队主唱白纪然一眼惊艳，邀请白纪然做自己的模特，穷追不舍，却屡遭拒绝温浅受父之命前往成都文殊院取一件母亲生前藏品送回英国，拿到装有陨石的锦袋，与白纪然再次不期而遇。白纪然认出温浅…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:38:26</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50192.html">谷文昌</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200228/9c/14/a_100345132_m_601_m4_180_236.jpg" alt="谷文昌" /></div>
+                    <dl>
+                        <dt>谷文昌</dt>
+                        <dd><label>主演：</label>刘佩琦,雷恪生,奚美娟,韩童生,薛山,刘威</dd>
+                        <dd><label>剧情：</label>解放了，生长在太行山下河南林县的谷文昌满腔热情地跟随解放军南下在解放福建东山的战斗中，谷文昌俘虏了战场上的老对手国民党军官邹复国。1950年5月12日东山解放了，谷文昌服从组织安排留在了东山工作，可这…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:37:01</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50199.html">我可能不会爱你 泰版普通话版</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200113/6d/b5/a_100380050_m_601_m1_180_236.jpg" alt="我可能不会爱你 泰版普通话版" /></div>
+                    <dl>
+                        <dt>我可能不会爱你 泰版普通话版</dt>
+                        <dd><label>主演：</label>亚瑞克·阿莫苏帕西瑞,莫茶诺·欣彩萍翩,Chinawut,Indracusin</dd>
+                        <dd><label>剧情：</label>纳坤和萍慕是一对青梅竹马的好朋友，两人都是单身青年，所有人都觉得他们应该在一起，但纳坤却无法突破朋友的界限萍慕生日那天两人互相约定，如果谁没有在35岁之前结婚，就认输并给对方10万元的红包。纳坤是继续…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:36:28</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%B3%B0%E5%9B%BD/id/2.html' target='_blank'>泰国</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50195.html">良医第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200213/03/b5/a_100369289_m_601_m2_180_236.jpg" alt="良医第2季" /></div>
+                    <dl>
+                        <dt>良医第2季</dt>
+                        <dd><label>主演：</label>弗莱迪·海默,尼古拉斯·冈萨雷斯,Antonia,Thomas,Tamlyn,Tomita,希尔·哈勃,理查德·希夫</dd>
+                        <dd><label>剧情：</label>ABC正式续订弗莱迪·海默主演的医务剧#The Good Doctor##良医#，第二季将于今秋播出…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:35:01</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E7%BE%8E%E5%9B%BD/id/2.html' target='_blank'>美国</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49774.html">医妃难囚第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200109/b8/46/a_100380493_m_601_m7_180_236.jpg" alt="医妃难囚第2季" /></div>
+                    <dl>
+                        <dt>医妃难囚第2季</dt>
+                        <dd><label>主演：</label>陆怡璇,盛英豪,高寒,骆俊帆,陈烁,王美琪</dd>
+                        <dd><label>剧情：</label>在《医妃难囚》剧粉纪嘉儿的再创作下，已经死去的纪纤云又重新回到了东临太子亓凌霄身边，只是这次她竟然变成兰若溪的容貌兰若溪为了接近亓凌霄，让他认出自己，凭借超强的医术实力考入了云医馆，成为了皇上的御前医…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:34:24</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50278.html">绿水青山带笑颜DVD版</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20200319/94/89/a_100393503_m_601_m2_180_236.jpg" alt="绿水青山带笑颜DVD版" /></div>
+                    <dl>
+                        <dt>绿水青山带笑颜DVD版</dt>
+                        <dd><label>主演：</label>杨烁,潘之琳,于洋（主持人）,马苏,刘流,阿楠</dd>
+                        <dd><label>剧情：</label>32岁的许晗在上海工作了八年，他疲惫不堪，想回老家，到乡下找老同学沈欢歌，偶遇杜笑语，并一见钟情沈欢歌已经暗恋杜笑语十年，杜笑语决定辞职回家开办农场，许晗觉得办民宿不错就租下了杜笑语家的老房子，开办起…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:34:21</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49758.html">唐人街探案</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20200103/fc/fa/a_100356902_m_601_m8_180_236.jpg" alt="唐人街探案" /></div>
+                    <dl>
+                        <dt>唐人街探案</dt>
+                        <dd><label>主演：</label>邱泽,张钧甯,王真儿,陈哲远,程潇,张艺上</dd>
+                        <dd><label>剧情：</label>光怪陆离的泰国，接连发生多起奇异的案件，“唐人街第一神探”唐仁的徒弟林默,野田昊的弟弟野田昊二，纷纷陷入探案的谜团之中……死者妻子IVY、酒吧歌手阿温、五大灵童战队成员陆菁菁、初出茅庐的女警萨莎也悉数…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:34:06</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50167.html">大唐女法医</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200306/24/4a/a_100385741_m_601_m3_180_236.jpg" alt="大唐女法医" /></div>
+                    <dl>
+                        <dt>大唐女法医</dt>
+                        <dd><label>主演：</label>周洁琼,李程彬,裴子添,蓝博,王一哲,屠画</dd>
+                        <dd><label>剧情：</label>该剧主要讲述18岁落魄贵女冉颜（周洁琼饰）为了查明母亲自杀真相，从小开始学习验尸绝学，成人后巧遇刑部侍郎萧颂（李程彬饰）和绝命杀手苏伏（裴子添饰）和天才书生桑辰（蓝博饰），解开一个又一个杀人情案，在探…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:57</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50235.html">仓鼠小笛笛的吃播日常</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200226/af/0b/a_100382279_m_601_m2_180_236.jpg" alt="仓鼠小笛笛的吃播日常" /></div>
+                    <dl>
+                        <dt>仓鼠小笛笛的吃播日常</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>呆萌、好奇、有活力传说中的安利精，遇到好吃的东西、有趣的事情一定要分享推荐给别人，有时候过于热情而让人有些负担………</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:53</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50285.html">冬天没有童话</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200318/2d/68/v_143445842_m_601_m6_180_236.jpg" alt="冬天没有童话" /></div>
+                    <dl>
+                        <dt>冬天没有童话</dt>
+                        <dd><label>主演：</label>吴莉（演员）,陈逸啸</dd>
+                        <dd><label>剧情：</label>美女作家姜诗辰在新书发布会现场被指抄袭失踪作家如云，随后带血手稿的出现让她噩梦缠身，频临崩溃的诗辰决定寻找如云以解心结…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:52</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50251.html">猪屁登第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200318/31/18/a_100382543_m_601_m2_180_236.jpg" alt="猪屁登第1季" /></div>
+                    <dl>
+                        <dt>猪屁登第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>一只可爱的小猪和小伙伴们传递正能量的故事…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:42</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50203.html">盛宠之锦绣征途第2季 愿与君随</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200225/33/c6/a_100382427_m_601_m2_180_236.jpg" alt="盛宠之锦绣征途第2季 愿与君随" /></div>
+                    <dl>
+                        <dt>盛宠之锦绣征途第2季 愿与君随</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>第一次见面，秦凌把诸葛云乐的衣服扒了，穿在自己身上，悠哉悠哉回了家第二次见面，秦凌把自己的衣服一件件脱下来，“你走不走，不走我喊非礼了啊！” 第三次见面，秦凌笑嘻嘻对他说：“脱衣服这种事，一回生二回熟…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:39</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50234.html">恶女会改变第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200207/a7/f2/a_100380329_m_601_m1_180_236.jpg" alt="恶女会改变第1季" /></div>
+                    <dl>
+                        <dt>恶女会改变第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>在一个拥有魔法的大陆，有一个被成为“恶女”的女人她想要被爱，却遭受冷落;想要去爱，却无人接受。    她虽贤明，充满慈爱与气....内心却一直都十分孤独。于是，她决定去接受最真实的那个自己。这也让她…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:32</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50315.html">谜案</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200327/0b/42/v_146466521_m_601_m3_180_236.jpg" alt="谜案" /></div>
+                    <dl>
+                        <dt>谜案</dt>
+                        <dd><label>主演：</label>易勇名,赵强</dd>
+                        <dd><label>剧情：</label>民国大院少爷李天远迫于母亲的压力，迎娶青楼戏子墨轩，不料李老夫人当夜惨死，警长刘海刚和副官宋诚对此案展开调查一件25年前的往事被再次翻开，一场精心策划的复仇阴谋也被一步步解开。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:33:31</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50283.html">鬓边不是海棠红</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200320/0c/ea/a_100277870_m_601_m11_180_236.jpg" alt="鬓边不是海棠红" /></div>
+                    <dl>
+                        <dt>鬓边不是海棠红</dt>
+                        <dd><label>主演：</label>黄晓明,尹正,佘诗曼,米热,刘敏,李泽锋</dd>
+                        <dd><label>剧情：</label>上世纪三十年代的北平，爱国热血商人程凤台（黄晓明 饰）与一代天才京剧名伶商细蕊（尹正 饰）因戏结缘相知，两人在梨园百态和战火动乱中并肩奋斗前行，坚定了振兴京剧国粹的信念和定倾扶危以身救国的崇高理想，最…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-30 22:32:31</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-30</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49972.html">奥特英雄传 赛罗和捷德</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20191227/64/e9/a_100376019_m_601_m2_180_236.jpg" alt="奥特英雄传 赛罗和捷德" /></div>
+                    <dl>
+                        <dt>奥特英雄传 赛罗和捷德</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>赛罗奥特曼是赛文奥特曼的儿子，自十年前登场以来一直保持着超高人气和他并肩作战的伙伴捷德奥特曼又是宿敌贝利亚的儿子。他们这两对的父子关系截然不同。本作将赛罗奥特曼、捷德奥特曼英勇作战的片段节选集锦，为您…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:33:31</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50100.html">总裁在上第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200207/23/2a/a_100375990_m_601_m4_180_236.jpg" alt="总裁在上第1季" /></div>
+                    <dl>
+                        <dt>总裁在上第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>改编自iCiyuan动漫漫画作品《总裁在上》三流少女漫画家时小念，被名誉全球的科技之王宫欧掠去，一再要她交出三年前为他生的宝宝，时小念否认认识他，却被宫欧不断用各种手段逼她交出孩子 过程中，时小念…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:33:26</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50233.html">毒医狂妃</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200207/69/59/a_100380594_m_601_m2_180_236.jpg" alt="毒医狂妃" /></div>
+                    <dl>
+                        <dt>毒医狂妃</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>白萧萧一朝穿越，竟然穿成了个小胖砸？都说将军府里的嫡女软绵好欺，正好，那就让她们见识下她的手段！撩美男治白莲……可这还没快乐几天，怎么就被傲娇皇叔找上门来？双修是什么可以吃吗？皇叔你暂且闪开，看她一代…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:33:14</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50198.html">请回答王牌2020</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200302/b9/47/a_100384626_m_601_m2_180_236.jpg" alt="请回答王牌2020" /></div>
+                    <dl>
+                        <dt>请回答王牌2020</dt>
+                        <dd><label>主演：</label>沈涛,沈腾,贾玲,华晨宇,关晓彤</dd>
+                        <dd><label>剧情：</label>是王牌对王牌节目单独拍摄一部分内容（涉及到一些小游戏、访谈、问答）再加正片未播片段和精彩花絮组成衍生节目…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:33:09</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50000.html">欢乐喜剧人第6季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200126/bb/18/a_100381382_m_601_m5_180_236.jpg" alt="欢乐喜剧人第6季" /></div>
+                    <dl>
+                        <dt>欢乐喜剧人第6季</dt>
+                        <dd><label>主演：</label>郭德纲,潘斌龙,白凯南,高晓攀,郭阳,郭亮</dd>
+                        <dd><label>剧情：</label>欢乐喜剧人第6季…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:32:42</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50197.html">天赐的声音</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200215/75/23/a_100381450_m_601_m6_180_236.jpg" alt="天赐的声音" /></div>
+                    <dl>
+                        <dt>天赐的声音</dt>
+                        <dd><label>主演：</label>胡海泉,王力宏,胡彦斌,苏有朋,张韶涵</dd>
+                        <dd><label>剧情：</label>《天赐的声音》是由浙江卫视于2020年第一季度推出，每周六晚20:30播出的音乐励志综艺节目中，四位音乐合伙人（王力宏、苏有朋、胡彦斌、张韶涵）每期将携手不同的飞行合伙人，完成多元化的经典合唱。《天赐…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:32:28</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50314.html">大鱼1</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic9.iqiyipic.com/image/20200329/6f/f0/v_145211727_m_601_m6_180_236.jpg" alt="大鱼1" /></div>
+                    <dl>
+                        <dt>大鱼1</dt>
+                        <dd><label>主演：</label>付梦妮,梅洋,狄龙,常戎</dd>
+                        <dd><label>剧情：</label>电影《大鱼》讲述了渔民陈子豪偶遇女孩小艺，两人萌发情愫但小艺并非人类，而是能化身大鱼的皈黎人。子豪意识到了人类滥杀捕捞的恶果，他选择唤醒渔民、阻止滥杀，生动体现了保护海洋环境的时代需求。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-29 22:32:04</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-29</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50299.html">重生之慕甄第4季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200324/86/84/a_100392450_m_601_m2_180_236.jpg" alt="重生之慕甄第4季" /></div>
+                    <dl>
+                        <dt>重生之慕甄第4季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>她重生了两次，第一世，她看着他与别的女人双宿双飞，郁郁而终，第二世，她拼尽全力、不择手段，只为得到他，女主历经三世，第一世，初见男主，便情根深种，不顾父兄反对，执意嫁给男主，初来乍到，在森严的京城中显…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:33:45</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49779.html">爱情公寓5</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200111/51/8a/a_100079340_m_601_m16_180_236.jpg" alt="爱情公寓5" /></div>
+                    <dl>
+                        <dt>爱情公寓5</dt>
+                        <dd><label>主演：</label>娄艺潇,李佳航,孙艺洲,李金铭,张一铎,成果</dd>
+                        <dd><label>剧情：</label>一幢并不奢华的公寓，两间普普通通的套房，住着七个不同背景，不同身份，不同理想的青年男女就在这里，每天都发生着看似平常却又乐趣十足的幽默故事。时而搞笑、时而离奇、时而浪漫、时而感人。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:33:36</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50296.html">我不是教主</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200324/27/81/a_100392298_m_601_m4_180_236.jpg" alt="我不是教主" /></div>
+                    <dl>
+                        <dt>我不是教主</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>我是谁？我在哪？我在做什么？ 等等！盟主大人！快住手！！ 我真的……不是教主啊！ 江湖上都以为魔教教主是女的，谁知道教主还能暗搓搓开后宫？！【《我不是教主》漫动画，每周五更新！】…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:33:32</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50045.html">奥特英雄传 赛罗和捷德 普通话版</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200121/81/15/a_100380165_m_601_m2_180_236.jpg" alt="奥特英雄传 赛罗和捷德 普通话版" /></div>
+                    <dl>
+                        <dt>奥特英雄传 赛罗和捷德 普通话版</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>赛罗奥特曼是赛文奥特曼的儿子，自十年前登场以来一直保持着超高人气和他并肩作战的伙伴捷德奥特曼又是宿敌贝利亚的儿子。他们这两对的父子关系截然不同。本作将赛罗奥特曼、捷德奥特曼英勇作战的片段节选集锦，为您…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:33:00</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50313.html">花千谷之花魂之路</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200326/8a/27/v_146324577_m_601_m3_180_236.jpg" alt="花千谷之花魂之路" /></div>
+                    <dl>
+                        <dt>花千谷之花魂之路</dt>
+                        <dd><label>主演：</label>冯砚,苗壮</dd>
+                        <dd><label>剧情：</label>一场天灾浩劫，紫魔兰在人类居住的山谷肆意滋长，它能够使人沉沦直至失去生命，只有花千谷由于花神树的镇守而幸免于难但神兽凤凰从山谷外带来的紫魔兰毒浸染的婴儿打破了花千古的平静。花千谷的国王和王后违背了花千…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:32:47</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50001.html">王牌对王牌第5季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200119/29/2d/a_100381267_m_601_m2_180_236.jpg" alt="王牌对王牌第5季" /></div>
+                    <dl>
+                        <dt>王牌对王牌第5季</dt>
+                        <dd><label>主演：</label>沈涛,沈腾,贾玲,华晨宇,关晓彤</dd>
+                        <dd><label>剧情：</label>浙江卫视推出的大型原创室内竞技真人秀节目，每期围绕一个主题，邀请两支王牌团队，由两队固定队长各带领多名热门IP嘉宾进行PK对战，通过才艺比拼、游戏竞技，决出王牌中的王牌…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 22:32:15</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50311.html">16</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/" alt="16" /></div>
+                    <dl>
+                        <dt>16</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-28 10:35:18</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/id/2.html' target='_blank'></a> </div>
+            <div class="lasted-time fn-right">2020-03-28</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/46176.html">超凡斗灵师</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20190111/1c/b8/v_123839756_m_601_180_236.jpg" alt="超凡斗灵师" /></div>
+                    <dl>
+                        <dt>超凡斗灵师</dt>
+                        <dd><label>主演：</label>周展翅,张学智,林京来,郭中友</dd>
+                        <dd><label>剧情：</label>在异次元世界的北玄星上，存在一个利用人类训练的战斗灵物进行斗灵的族群，邪派血盟妄图依靠拥有强大力量的魔晶称霸拳台而对付斗灵族群；斗灵师庄峰在重创之下失去斗志，女儿庄妙为了帮助父亲重拾信心并对抗血盟，选…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 23:54:26</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/22714.html">生命之源</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20171015/83/b2/v_112868261_m_601_180_236.jpg" alt="生命之源" /></div>
+                    <dl>
+                        <dt>生命之源</dt>
+                        <dd><label>主演：</label>约根·沃格尔,Meret,Becker,莫里兹·布雷多,丽莎·斯密特,Kostja,Ullmann</dd>
+                        <dd><label>剧情：</label>This is a family story that covers thirty years in the life of the Freytag family (narrated by the g…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 23:33:32</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%BE%B7%E5%9B%BD/id/1.html' target='_blank'>德国</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50306.html">士兵顺溜：兵王争锋</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200325/83/9b/v_142622617_m_601_m5_180_236.jpg" alt="士兵顺溜：兵王争锋" /></div>
+                    <dl>
+                        <dt>士兵顺溜：兵王争锋</dt>
+                        <dd><label>主演：</label>李正翔,李晔,胡谦,沈磊</dd>
+                        <dd><label>剧情：</label>电影改编自现役王牌部队90后新兵的真实故事自小怀揣“兵王梦”的顺溜，在角逐新一届“特种兵王”的过程中，遭遇了最大的劲敌，争夺兵王之路困难重重，巅峰对决一触即发。危机之时，边境突发武装冲突，以顺溜为首的…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 23:28:53</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49956.html">索玛丽与森林之神</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200102/a6/54/a_100376023_m_601_m3_180_236.jpg" alt="索玛丽与森林之神" /></div>
+                    <dl>
+                        <dt>索玛丽与森林之神</dt>
+                        <dd><label>主演：</label>水濑祈,小野大辅</dd>
+                        <dd><label>剧情：</label>我在森林中，与“那小东西”相遇了“人类（那小东西）”称“哥雷姆（我）”为父亲。这是一个陆地被异形们所支配的世界。人类遭受迫害，面临着灭绝的危机。就在某一天，森林守护者“哥雷姆”，与一名人类少女“索…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 22:33:49</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E6%97%A5%E6%9C%AC/id/4.html' target='_blank'>日本</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50310.html">本王不愁嫁</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200324/f5/5e/a_100393846_m_601_m1_180_236.jpg" alt="本王不愁嫁" /></div>
+                    <dl>
+                        <dt>本王不愁嫁</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>生于边疆长于沙场，天生神力武勇过人不拘小节的肃王殿下，满口糙话豪爽洒脱，世人都坚信其为大雍男子楷模真英雄也，其实是女儿身——她大龄未婚父母双亡，有马有房有小弟工作稳定有高薪，就差个如意夫君…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 22:33:44</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49954.html">魔晶猎人第5季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic4.iqiyipic.com/image/20200117/b5/18/a_100380020_m_601_m2_180_236.jpg" alt="魔晶猎人第5季" /></div>
+                    <dl>
+                        <dt>魔晶猎人第5季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>魔晶学院内战火重燃，暗黑势力再度来袭，魔晶少年团再度集结，他们又将面临一场更加艰巨凶险的挑战危机面前，魔晶少年团能否再次突破重围，千瑞能否披上魔晶猎人的战袍带领大家化险为夷………</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-27 22:33:24</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-27</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50308.html">恶魔少爷太难缠第1季 杠上拽丫头</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200324/72/e0/a_100391475_m_601_m1_180_236.jpg" alt="恶魔少爷太难缠第1季 杠上拽丫头" /></div>
+                    <dl>
+                        <dt>恶魔少爷太难缠第1季 杠上拽丫头</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>他是自命清高的恶魔少爷！她是贫穷善良的倔强丫头！ 一次误闯男生宿舍，送错情书，她被迫成为恶魔少爷的奴隶 一次又一次的针锋相对，一次又一次的对抗，却让彼此的心更加靠近。 一场突如起来的事故，却让两个人形…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-26 22:33:23</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-26</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50207.html">恶魔的独宠甜妻第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200207/6e/a4/a_100380322_m_601_m2_180_236.jpg" alt="恶魔的独宠甜妻第2季" /></div>
+                    <dl>
+                        <dt>恶魔的独宠甜妻第2季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>腹黑傲娇作死男恋上炸毛“直男”女孩儿，软硬兼施、机关算尽、狂甩节操，一面手段强硬，一面浮想联翩玻璃心；女孩儿被男人搞得十脸懵逼，在通往男人的心的路上走得七扭八拐，最终才隐隐看清起他的真面目……这是个作…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-26 22:33:20</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-26</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50307.html">告别练习</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200325/07/13/v_145218233_m_601_m2_180_236.jpg" alt="告别练习" /></div>
+                    <dl>
+                        <dt>告别练习</dt>
+                        <dd><label>主演：</label>张棪琰,张晓谦,孙博,张本煜,那圣岩,易小星</dd>
+                        <dd><label>剧情：</label>如果有一天意外降临，你将用什么姿势告别爱你与你爱的世界？ 中年大妈马蓉芳，啃哥艺术家张可，宠女友狂魔丁然，他们因为一场阴差阳错的意外走到了生命的十字路口往前一步是生，往后一步则是死。生死阴阳之间，有一…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-26 22:32:53</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-26</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50305.html">陈情令之乱魄</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200325/09/b1/v_145395653_m_601_m10_180_236.jpg" alt="陈情令之乱魄" /></div>
+                    <dl>
+                        <dt>陈情令之乱魄</dt>
+                        <dd><label>主演：</label>纪李,王翌舟,朱赞锦,何翔</dd>
+                        <dd><label>剧情：</label>故事讲述了清河聂氏面临祭刀堂危难之时，兄长聂明玦带领弟弟聂怀桑舍己为人，修复祭刀堂以保家族平安的故事故事中弟弟聂怀桑与兄长聂明玦携手共进，抵御层层困难。在历险之中，二人摩擦不断，聂明玦指责聂怀桑胆小怕…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-26 22:32:26</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-26</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49958.html">元尊动态漫第1季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200115/2c/0d/a_100374376_m_601_m3_180_236.jpg" alt="元尊动态漫第1季" /></div>
+                    <dl>
+                        <dt>元尊动态漫第1季</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>改编自知名作家天蚕土豆的同名漫画《元尊》，讲述了大周王朝太子周元，遭到敌国大武王朝的戕害，圣龙气运被夺，身中怨龙毒，多年来无法修炼，命在旦夕而少年周元，热血不息，遇少女夭夭，得天元神笔，解除桎梏，击败…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-26 22:32:21</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-26</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50187.html">少主且慢行第2季</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic6.iqiyipic.com/image/20200307/b9/a5/a_100386125_m_601_m4_180_236.jpg" alt="少主且慢行第2季" /></div>
+                    <dl>
+                        <dt>少主且慢行第2季</dt>
+                        <dd><label>主演：</label>虞书欣,刘奕畅,骆明劼,陈昊蓝</dd>
+                        <dd><label>剧情：</label>讲述三七在纠结之时，遇到了各种条件都符合自己童年小哥哥特征的少城主何臻在考虑保护大家大目的下，三七内心十分斗争。与此同时，三七的好朋友何若瑶也和北府白一飞感情升温。在一步一步揭开一个个案件的真相后，才…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:32:11</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50163.html">致敬英雄</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20200310/cf/3f/v_140270497_m_601_m10_180_236.jpg" alt="致敬英雄" /></div>
+                    <dl>
+                        <dt>致敬英雄</dt>
+                        <dd><label>主演：</label>李星昊,邹梓越,温玉娟,方子怡,郑昊,何政军</dd>
+                        <dd><label>剧情：</label>本片描写在国家应急管理部领导下，大应急转型为主线 一位母亲的家国情怀，爱子江山子承父业，通过严格的军事训练，执行各种抢险救援任务，赴汤蹈火，用汗水谱写忠诚，舍生忘死，用奉献诠释青春，竭诚为民的感人故事…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:31:56</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50160.html">谁都渴望遇见你</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic3.iqiyipic.com/image/20200222/4d/4d/a_100236030_m_601_m11_180_236.jpg" alt="谁都渴望遇见你" /></div>
+                    <dl>
+                        <dt>谁都渴望遇见你</dt>
+                        <dd><label>主演：</label>张哲瀚,章若楠,陈昊蓝,王以纶,刘哲尔,张延</dd>
+                        <dd><label>剧情：</label>在“不完美”的原生家庭长大的张泯，与懂得天上所有星座却唯独不知自己身世的陶伦，因一位能与植物对话的负离子女孩罗溪，被命运拴到了一起创伤与治愈、爱情与亲情的紧密交织，吟唱出一段关于疗愈、浪漫、温情的恋爱…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:31:55</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50303.html">永恒的心</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200323/f2/9f/v_145765297_m_601_m2_180_236.jpg" alt="永恒的心" /></div>
+                    <dl>
+                        <dt>永恒的心</dt>
+                        <dd><label>主演：</label>陈楚翰,王同辉,张浩</dd>
+                        <dd><label>剧情：</label>欧亚投资公司是一个高智商金融诈骗团伙，大鳄刘笑佛利用法律规则环环设局，巧取豪夺，资金、房产、公司股权，所过之处，哀鸿遍地梁宗杰与乔赢是律师界大咖级律师，同门斗法，入局破局，与狼共舞，险象环生，揭开了一…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:31:54</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50014.html">2020天津卫视德云社相声春晚</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200123/10/44/a_100382788_m_601_m6_180_236.jpg" alt="2020天津卫视德云社相声春晚" /></div>
+                    <dl>
+                        <dt>2020天津卫视德云社相声春晚</dt>
+                        <dd><label>主演：</label>郭德纲,于谦,岳云鹏,孙越,孟鹤堂,周九良</dd>
+                        <dd><label>剧情：</label>天津卫视·德云社春节相声晚会《开开心心年年好》，1月23日晚爱奇艺全网首播郭德纲于谦率德云社男团顶级阵容齐聚大年二十九，陪大家提前开开心心过大年。…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:31:54</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/3.html">综艺</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/3.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50302.html">如果有如果</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic7.iqiyipic.com/image/20200324/63/85/v_146074804_m_601_m3_180_236.jpg" alt="如果有如果" /></div>
+                    <dl>
+                        <dt>如果有如果</dt>
+                        <dd><label>主演：</label>文儿,金娃,赵小磊,九情,任青安</dd>
+                        <dd><label>剧情：</label>徐艺恩为给弟弟做癌症手术，她从车祸现场偷走了受害者的钱包，出于良心谴责她把外套披给了一个陌生女孩，然而谁也没有料到，衣服兜里竟然装着一张中了巨奖的彩票，面对兴奋的弟弟，徐艺恩该如何保住彩票丢失的秘密……</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 22:31:51</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50300.html">10</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/" alt="10" /></div>
+                    <dl>
+                        <dt>10</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-25 01:46:23</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/id/1.html' target='_blank'></a> </div>
+            <div class="lasted-time fn-right">2020-03-25</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/49877.html">绝代双骄</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic2.iqiyipic.com/image/20200115/af/7b/a_100167142_m_601_m6_180_236.jpg" alt="绝代双骄" /></div>
+                    <dl>
+                        <dt>绝代双骄</dt>
+                        <dd><label>主演：</label>胡一天,陈哲远,梁洁,梁婧娴,罗嘉良,毛林林</dd>
+                        <dd><label>剧情：</label>十余年前燕南天是强绝天下的武者，江枫是世上第一大好人，燕南天以剑术独步武林，而江枫以相貌倾倒众生那时候的江湖中江海珠玉的「玉郎」江枫被誉为天下第一美男子与冰山寒玉号称江湖第一美人的「玉娘子」张三娘并列…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 22:31:55</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50179.html">危险的她</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic1.iqiyipic.com/image/20200305/29/d4/a_100388993_m_601_m6_180_236.jpg" alt="危险的她" /></div>
+                    <dl>
+                        <dt>危险的她</dt>
+                        <dd><label>主演：</label>马秋子,马歌,李劲峰,祁圣翰,翟冠华,朱庭辰</dd>
+                        <dd><label>剧情：</label>陆子聪向律师王琛求助，他怀疑妻子乔薇要“杀”他三个月前的同学会，乔薇偶遇前男友齐凯，又醉宿Nicole家一夜未归，与乔薇曾有嫌隙的大学同学苏遥，写了一篇公众号文章《当年的校花今夜去哪儿了》，从此揭开了…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 22:31:51</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/2.html">连续剧</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/2.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50245.html">Lily</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic5.iqiyipic.com/image/20200207/cc/81/a_100381750_m_601_m1_180_236.jpg" alt="Lily" /></div>
+                    <dl>
+                        <dt>Lily</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>每个人一生中都会遇到很多人，而凡一琳在最青葱的年纪遇到了蓝若兮，从此开始了她不一般的人生际遇公主和骑士，兔子和青蛙，你就是我的最重要的人。故事以一群高中生的日常生活为主，着重于凡一琳和蓝若兮的互动。两…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 22:31:45</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50254.html">在下铲屎官，喵王在上</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic0.iqiyipic.com/image/20200221/e3/8e/a_100380084_m_601_m2_180_236.jpg" alt="在下铲屎官，喵王在上" /></div>
+                    <dl>
+                        <dt>在下铲屎官，喵王在上</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>夜路走多了，竟捡到宝，带着巨钻的小黑猫一只！可这是猫吗？霸她浴缸，抢她粮，每天还要她暖暖床？为了钱她忍了，可这只死猫竟潜逃！直到一天，公司新来终极大BOSS，她惊悚发现，他脖子上的钻石，竟跟她半夜捡来…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 22:31:34</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/4.html">动漫</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/4.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50295.html">快进者</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/tu.php?a=http://pic8.iqiyipic.com/image/20200324/f5/05/v_145135969_m_601_m6_180_236.jpg" alt="快进者" /></div>
+                    <dl>
+                        <dt>快进者</dt>
+                        <dd><label>主演：</label>张瑞涵（男）,施诗,贾冰,海一天,马藜,姜超</dd>
+                        <dd><label>剧情：</label>高尚，一名从小有着赛车梦想，平凡普通的救护车司机，开着自己的爱车，竟误打误撞卷入一场飙车纷争之中，引擎的轰鸣，急速的诱惑，都让他的生活发生了巨大的变化本以为是苦恼的纠缠，却发现是心底梦想的迸发，以为一…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 22:30:44</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/area/%E5%A4%A7%E9%99%86/id/1.html' target='_blank'>大陆</a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        <li><div class="lasted-num fn-left">∷</div>
+            <div class="lasted-tit fn-left">
+                <h5 class="show-tipinfo"><a href="/index.php/vod/detail/id/50294.html">166</a><em>/</em></h5>
+                <div class="tipInfo">
+                    <div class="play-img"><img src="/" alt="166" /></div>
+                    <dl>
+                        <dt>166</dt>
+                        <dd><label>主演：</label></dd>
+                        <dd><label>剧情：</label>…</dd>
+                        <dd class="bg">状态：<br />更新时间：2020-03-24 01:39:21</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="lasted-type fn-left"><a href="/index.php/vod/type/id/1.html">电影</a></div>
+            <div class="lasted-tags fn-left"><a href='/index.php/vod/list/id/1.html' target='_blank'></a> </div>
+            <div class="lasted-time fn-right">2020-03-24</div>
+            </li>
+                        </ul>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<div class="footer">
+    <div class="foot-nav">
+                <a class="color" href="/index.php/vod/type/id/1.html" title="电影">电影</a>-
+                <a class="color" href="/index.php/vod/type/id/2.html" title="连续剧">连续剧</a>-
+                <a class="color" href="/index.php/vod/type/id/3.html" title="综艺">综艺</a>-
+                <a class="color" href="/index.php/vod/type/id/4.html" title="动漫">动漫</a>-
+
+        <a href="/index.php/map/index.html" title="最近更新">最近更新</a>-
+        <a href="/index.php/gbook/index.html" title="反馈留言">反馈留言</a>-
+        <a href="/index.php/rss/index.xml" title="rss">RSS</a>-
+        <a href="/index.php/rss/baidu.xml" target="_blank" title="网站地图">Sitemap</a>
+    </div>
+    <div class="copyright">
+        <p>免责声明：若本站收录的资源侵犯了您的权益，请发邮件至：123456@maccms.com，我们会及时删除侵权内容，谢谢合作！</p>
+        <p>Copyright &#169; 2012-2018 1.cn. All Rights Reserved. 统计代码 </p>
+    </div>
+</div>
+</body>
+</html>

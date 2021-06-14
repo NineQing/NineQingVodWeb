@@ -1,0 +1,34 @@
+<script type="text/javascript">
+<?php if($player['dp']['last']>0){ ?>
+        var cookie = {
+          'set': function(name, value, days) {
+            var exp = new Date();
+            exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
+            var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));
+            document.cookie = name + '=' + escape(value) + ';path=/;expires=' + exp.toUTCString();
+          },
+          'get': function(name) {
+            var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));
+            if (arr != null) return unescape(arr[2]);
+          },
+          'put': function(urls) {
+            var cookie = urls.replace(/[^a-z]+/ig, '');
+            var cookie = cookie.substring(cookie.length - 32);
+            return cookie;
+          }
+        }
+        dp.on('loadeddata',function() {
+          cookie.get(urls) ? dp.seek(cookie.get(urls)) : dp.notice("视频已就绪");
+          dp.on('timeupdate',function() {
+            if (cookie) cookie.set(urls, dp.video.currentTime, 30);
+          });
+        });
+<?php } if($player['dp']['next']>0){ ?>
+        dp.on('ended',function() {
+          dp.notice("视频播放已结束");
+          <?php if($player['dp']['next']>0){ ?>if (jump != '') {
+            top.location.href = jump;
+          }<?php } ?>
+        });
+<?php } ?>
+</script>

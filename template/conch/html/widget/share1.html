@@ -1,0 +1,55 @@
+<!--播放页-->
+<div class="dropdown">
+	<!--百度分享按钮-->
+    {if condition="$conch['theme']['share']['bdbtn'] eq 1"}
+    <div class="bds_share_title">分享到</div>
+	<div class="bdsharebuttonbox" data-tag="share_1">
+	<a class="bds_weixin" data-cmd="weixin"></a>
+	<a class="bds_sqq" data-cmd="sqq"></a>
+	<a class="bds_tsina" data-cmd="tsina"></a>
+	<a class="bds_qzone" data-cmd="qzone"></a>
+	<a class="bds_more" data-cmd="more"></a>
+    </div>
+    {/if}
+    <input class="share-none" value="2012457684" id="app_key">
+    <span class="share_tips">复制下方链接，去粘贴给好友吧：</span>
+	<span id="short2" class="share_link shorturl">
+{if condition="$conch['theme']['share']['zdyfx'] eq 1"}
+{$conch['theme']['share']['link']|mac_default='http://ys.ain19.com'}
+{else}
+《{$obj.art_name}》http://{$maccms.site_url}{:mac_url_art_detail($obj)}
+{/if}
+		</span>
+	<span id="btn" class="copy_btn" data-clipboard-action="copy" data-clipboard-target="#short2">复制链接</span>
+	
+	{if condition="$conch['theme']['share']['bdbtn'] eq 1"}
+		{if condition="$maccms.mid eq 2"}
+		<script>
+			window._bd_share_config = {
+				common : {
+					bdText : '{$obj.art_name}-{$maccms.site_name}',
+					bdPic : '{:mac_url_img($obj.art_pic)}'
+				},
+				share : [{
+					"bdSize" : 32
+				}]
+			}
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/template/conch/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+		{else}
+		<script>
+			window._bd_share_config = {
+				common : {
+					bdText : '{$obj.vod_name}-{$maccms.site_name}',
+					bdPic : '{:mac_url_img($obj.vod_pic)}'
+
+				},
+				share : [{
+					"bdSize" : 32
+				}]
+			}
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/template/conch/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+		{/if}
+	{/if}
+</div>

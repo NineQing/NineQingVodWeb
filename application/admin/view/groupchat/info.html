@@ -1,0 +1,80 @@
+{include file="../../../application/admin/view/public/head" /}
+<script type="text/javascript" src="__STATIC__/js/jquery.jscolor.js"></script>
+{include file="../../../application/admin/view/public/editor" flag="topic_editor"/}
+<div class="page-container p10">
+
+    <div class="showpic" style="display:none;"><img class="showpic_img" width="120" height="160"></div>
+
+    <form class="layui-form layui-form-pane" method="post" action="">
+        <input type="hidden" name="id" value="{$info.id}">
+
+        <div class="layui-tab">
+            <ul class="layui-tab-title ">
+                <li class="layui-this">基本信息</li>
+
+            </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">名称：</label>
+                    <div class="layui-input-inline w500">
+                        <input type="text" class="layui-input" lay-verify="name" value="{$info.title}" placeholder="" name="title">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">地址：</label>
+                    <div class="layui-input-inline w500">
+                        <input type="text" class="layui-input" lay-verify="" value="{$info.url}" placeholder="" name="url">
+                    </div>
+                </div>
+     
+            </div>
+        </div>
+        </div>
+        <div class="layui-form-item center">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit" data-child="">保 存</button>
+                <button class="layui-btn layui-btn-warm" type="reset">还 原</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+{include file="../../../application/admin/view/public/foot" /}
+
+
+<script type="text/javascript">
+
+    layui.use(['form','upload', 'layer','laydate'], function () {
+        // 操作对象
+        var form = layui.form
+                , layer = layui.layer
+                , $ = layui.jquery
+                , upload = layui.upload,
+            laydate = layui.laydate;
+
+        // 验证
+        form.verify({
+            name: function (value) {
+                if (value == "") {
+                    return "请输入名称";
+                }
+            },
+            img: function (value) {
+                if (value == "") {
+                    return "请输入图片地址";
+                }
+            },
+            url: function (value) {
+                if (value == "") {
+                    return "请输入直播地址";
+                }
+            },
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

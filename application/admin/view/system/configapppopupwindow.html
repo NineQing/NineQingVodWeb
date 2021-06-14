@@ -1,0 +1,198 @@
+{include file="../../../application/admin/view/public/head" /}
+
+<div class="page-container">
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">APP弹窗配置</li>
+            </ul>
+            <div class="layui-tab-content">
+
+
+
+            <div class="layui-tab-item layui-show">
+            	<div class="layui-hide">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    未注册弹窗
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status1" value="0" title="关闭" {if condition="$config['popupwindo'][0]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status1" value="1" title="开启" {if condition="$config['popupwindo'][0]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="title1" name="title1" placeholder="" value="{$config['popupwindo'][0]['title']}" class="layui-input "  >
+                    </div>
+
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content1" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][0]['content']}</textarea>
+                    </div>
+                </div>
+</div>
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    已注册弹窗
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status2" value="0" title="关闭" {if condition="$config['popupwindo'][1]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status2" value="1" title="开启" {if condition="$config['popupwindo'][1]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="title2" name="title2" placeholder="" value="{$config['popupwindo'][1]['title']}" class="layui-input "  >
+                    </div>
+
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content2" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][1]['content']}</textarea>
+                    </div>
+                </div>
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    公告
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status3" value="0" title="关闭" {if condition="$config['popupwindo'][2]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status3" value="1" title="开启" {if condition="$config['popupwindo'][2]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+                <!--<div class="layui-form-item">-->
+                    <!--<label class="layui-form-label">标题：</label>-->
+                    <!--<div class="layui-input-block">-->
+                        <!--<input type="text" id="title3" name="title3" placeholder="" value="{$config['popupwindo'][2]['title']}" class="layui-input "  >-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content3" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][2]['content']}</textarea>
+                    </div>
+                </div>
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    滚动公告
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status4" value="0" title="关闭" {if condition="$config['popupwindo'][3]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status4" value="1" title="开启" {if condition="$config['popupwindo'][3]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content4" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][3]['content']}</textarea>
+                    </div>
+                </div>
+				<div class="layui-hide">
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    首页公告
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status5" value="0" title="关闭" {if condition="$config['popupwindo'][4]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status5" value="1" title="开启" {if condition="$config['popupwindo'][4]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content5" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][4]['content']}</textarea>
+                    </div>
+                </div>
+</div>
+			<div class="layui-hide">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    游戏公告
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status6" value="0" title="关闭" {if condition="$config['popupwindo'][5]['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="status6" value="1" title="开启" {if condition="$config['popupwindo'][5]['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+                <!--<div class="layui-form-item">-->
+                    <!--<label class="layui-form-label">标题：</label>-->
+                    <!--<div class="layui-input-block">-->
+                        <!--<input type="text" id="title4" name="title4" placeholder="" value="{$config['popupwindo'][3]['title']}" class="layui-input "  >-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea type="text" name="content6" placeholder="内容" value="" class="layui-textarea">{$config['popupwindo'][5]['content']}</textarea>
+                    </div>
+                </div>
+</div>
+
+            </div>
+            </div>
+        </div>
+        <div class="layui-form-item center">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit">保 存</button>
+                <button class="layui-btn layui-btn-warm" type="reset">还 原</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{include file="../../../application/admin/view/public/foot" /}
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>

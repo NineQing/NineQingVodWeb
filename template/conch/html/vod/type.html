@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+       
+	{include file="public/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}asset/js/parts/loading.js"></script>
+	<script src="{$maccms.path_tpl}asset/js/parts/jquery.adaptive.js"></script>
+</head>
+{if condition="($obj['type_id']==$conch['theme']['type']['zb']) OR ($obj['parent']['type_id']==$conch['theme']['type']['zb'])"}
+    {include file="module/typezb"}
+    <!--直播模块模板-->
+{else/}
+	{in name="obj.type_id" value="$conch['theme']['type']['ht']"}
+		{include file="module/typeht"}
+		<!--默认样式有二级分类-->
+	{else}
+		{in name="obj.type_id" value="$conch['theme']['type']['ho']"}
+			{include file="module/typeho"}
+			<!--地区样式模板-->
+		{else}
+			{in name="obj.type_id" value="$conch['theme']['type']['hb']"}
+				{include file="module/typehb"}
+				<!--横版样式模板-->
+		    {else}
+				{include file="module/typeqt"}
+				<!--无二级分类模板-->
+		    {/in}
+		{/in}
+	{/in}
+{/if}
+{include file="public/foot"}
+</body>
+</html>

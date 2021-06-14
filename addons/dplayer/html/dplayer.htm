@@ -1,0 +1,28 @@
+<?php include "header.htm"; ?>
+<body>
+<div id="video"></div>
+<script type="text/javascript">
+var urls = "<?php echo $url;?>";
+var jump = "<?php echo $jump;?>";
+var dp = new DPlayer({
+    container: document.getElementById('video'),
+    theme: '#4C8FE8', 
+    volume: 0.8,<?php
+    echo $player['logo']['status']?'logo:"'.$player['logo']['url'].'",':'';
+	echo $player['dp']['auto']?'autoplay: true,':'autoplay: false,';?>
+    video: {
+	    url: urls,<?php echo $player['pre']['status']?'pic: "'.$player['pre']['url'].'",':'';?>type: 'auto',
+		defaultQuality: 0
+	}
+	<?php if($player['copyright']['status']>0){?>,contextmenu: [{text: "<?php echo $player['copyright']['content'];?>",link: "<?php echo $player['copyright']['url'];?>"}]<?php } ?>
+});
+dp.on("fullscreen",function() {
+    dp.notice("全屏已开启");
+});
+dp.on("fullscreen_cancel",function() {
+    dp.notice("全屏已关闭");
+});
+</script>
+<?php include "foot.htm"; ?>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<?php include "header.htm"; ?>
+<style type="text/css">#ad{position:absolute;z-index:209910539;width:100%;height:100%}.closeclick{display:inline-block;width:100px;height:35px;line-height:35px;text-align:center;font-size:14px;border-radius:22px;margin:0px 10px;color:#2082B3;overflow:hidden;box-shadow:0px 2px 3px rgba(0,0,0,.3);background:#fff;position:absolute;z-index:9999;top:20px;right:35px}.pre-img{color:#fff;position:absolute;top:50%;left:50%;border-radius:5px;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}.pre-img img{<?php echo $pre['pic']['width']?'width:'.$pre['pic']['width']:'max-width:95%';?>;<?php echo $pre['pic']['height']?'height:'.$pre['pic']['height']:'max-height:95%';?>}#player_pause img{width:<?php echo $pause['width']?$pause['width']:'100%';?>;height:<?php echo $pause['height']?$pause['height']:'100%';?>}#vodlink{position:absolute;z-index:2099;width:100%;height:95%}.link{display:inline-block;width:100px;height:35px;line-height:35px;text-align:center;font-size:14px;border-radius:22px;margin:0px 10px;color:#fff;overflow:hidden;box-shadow:0px 2px 3px rgba(0,0,0,.3);background:#FF5722;position:absolute;z-index:9999;top:20px;right:35px}
+</style>
+<body>
+<div id="ad" <?php echo $pre['pic']['status']?'':'style="display:none"';?>></div>
+<div id="vodlink" <?php echo $pre['vod']['status']?'':'display:none;';?>></div>
+<div id="adplayer" style="height:100%;<?php echo $pre['vod']['status']?'':'display:none;';?>"></div>
+<div id="video" <?php echo $pre['vod']['status']?'style="display:none;"':'';?>></div>
+<script type="text/javascript">
+var urls = "<?php echo $url;?>";
+var jump = "<?php echo $jump;?>";
+var logo = "<?php echo $player['logo']['status']?$player['logo']['url']:'';?>";
+var pics = "<?php echo $player['pre']['status']?$player['pre']['url']:'';?>";
+<?php if($pre['vod']['status']>0){ ?>
+$("#vodlink").html('<a class="link" href="javascript:;">查看详情</a><a id="link" style="display:none;" href="<?php echo $pre["vod"]["link"];?>" target="_blank"></a>');
+$("#vodlink").click(function(){
+	document.getElementById('link').click();
+});
+var ad = new DPlayer({
+    container: document.getElementById('adplayer'),
+    theme: '#4C8FE8',
+    volume: 0.8,
+    logo: logo,
+    live: true,
+    autoplay: <?php echo $pre['pic']['status']?'false':'true'?>,
+    mutex: true,
+    preload: 'auto', 
+    video: {
+        quality: [{
+            name: '广告',
+            url: "<?php echo $pre['vod']['url'];?>",
+        }],
+        defaultQuality: 0
+    },
+});
+ad.on('timeupdate', function() { 
+    if (ad.video.currentTime > ad.video.duration-0.1) {            
+        $("#adplayer").remove(); 
+		$('#ad').remove(); 
+		$("#vodlink").remove();            
+        $("#video").show();            
+        dp.play();            
+        ad.destroy();  
+    }
+});
+function closeclick() {
+	<?php
+	if($pre['ads']['button']>0 && $pre['ads']['auth']==1 && @$_COOKIE['user_id'] ||
+	$pre['ads']['button']>0 && $pre['ads']['auth']==2 && $pre['ads']['group']==@$_COOKIE['group_id'] ||
+	$pre['ads']['button']>0 && $pre['ads']['auth']==0){
+    if($pre['vod']['status']!=1 && $pre['pic']['status']=!1){
+       echo '$("#adplayer").remove(); ';
+    }
+    echo '$("#ad").remove();
+    if (ad.video.currentTime <= 0 || ad.video.paused == false) {
+          ad.play();
+     } ';
+	}else{
+	    echo 'alert("vip会员才可跳过广告！");';
+	}
+	?>
+}
+function clickclose() {
+    $('#ad').remove();
+    $("#adplayer").show();
+    ad.play();
+}
+<?php } ?>
+
+
+<?php echo $pre['vod']['status']?'':'$("#vodlink").remove();';?>
+var dp = new DPlayer({
+    container: document.getElementById('video'),
+    theme: '#4C8FE8',
+    volume: 1.0,
+    preload: 'auto', 
+    logo: logo,
+    <?php if($pre['pic']['status']==0 && $pre['vod']['status']==0 && $player['dp']['auto']>0){echo 'autoplay: true';}else{echo 'autoplay: false';}?>,
+    video: {
+        url: urls,
+        pic: pics,
+        type: 'auto'
+    }<?php if($player['copyright']['status']>0){?>,contextmenu: [{text: "<?php echo $player['copyright']['content'];?>",link: "<?php echo $player['copyright']['url'];?>"}]<?php } ?>
+});
+<?php if($pause['status']>0){ ?>
+dp.on('pause', function () {
+      h2_pause();
+});
+dp.on('play', function () {
+       h2_remove();
+}); 
+function h2_remove() {
+	$('#player_pause').remove();
+}
+function h2_pause() {
+	$('#video').before('<div id="player_pause" style="position:absolute;z-index:209910539;top:50%;left:50%;border-radius:5px;-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:80%;max-height:80%;"><a href="<?php echo $pause["link"];?>" target="_blank"><img src="<?php echo $pause["pic"];?>" /></a></div>');
+}  <?php } ?>
+
+<?php if($pre['pic']['status']>0){ ?>
+$("#ad").html('<div class="pre-img"><a href="<?php echo $pre["pic"]["link"];?>" target="_blank"><img src="<?php echo $pre["pic"]["img"];?>" /></a></div><?php if($pre["ads"]["button"]>0){ ?><a class="closeclick" href="javascript:;" onclick="<?php echo $pre["vod"]["status"]?"closeclick();":"endclose();";?>">跳过<em id="pre_time"></em></a><?php } ?>');
+function dpclose() {
+    $('#ad').remove();
+    $("#adplayer").remove();    
+    dp.play(); 
+}
+function endclose() {
+	<?php
+	if($pre['ads']['button']>0 && $pre['ads']['auth']==1 && @$_COOKIE['user_id'] ||
+	$pre['ads']['button']>0 && $pre['ads']['auth']==2 && $pre['ads']['group']==@$_COOKIE['group_id'] ||
+	$pre['ads']['button']>0 && $pre['ads']['auth']==0){
+    echo '$("#ad").remove();
+    $("#adplayer").remove();    
+    dp.play(); ';
+	}else{
+	    echo 'alert("vip会员才可跳过广告！");';
+	}
+	?>
+}
+$(function() {     
+    var i = "<?php echo $pre['ads']['time'];?>"; 
+    setTimeout(function() {      
+         <?php echo $pre['vod']['status']?'clickclose();':'dpclose();';?> 
+    }, i * 1000);  
+    after();
+    function after() {  
+        if (i == 0) {      
+            $("#pre_time").empty().append(i);      
+            setTimeout(function() {        
+                after();      
+            }, 1000);  
+        } else {      
+            $("#pre_time").empty().append(i);      
+            i = i - 1;      
+            setTimeout(function() {        
+                after();      
+            }, 1000);  
+        }
+    }  
+});
+<?php } ?>
+</script>
+<?php include "foot.htm"; ?>
+</body>
+</html>

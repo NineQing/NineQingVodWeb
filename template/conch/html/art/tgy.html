@@ -1,0 +1,55 @@
+{if condition="$vo.art_pic eq ''"}
+<div class="tg">
+    <div class="tg1" style="display: inline-block;float: left;">
+        <a class="digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">
+		<img class="tgtu lazyload" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}" data-original="{$vo.art_pic|mac_url_img}">
+	     <div class="tgtext">
+	         <span>点击量：{$vo.vod_up}{$vo.art_up}{$vo.topic_up}</span>
+	         &nbsp;&nbsp;
+	         <span>发布：{$vo.art_time|mac_friend_date}</span>
+	     </div></a>
+	</div>
+	<div class="tg2">
+	    <a class="digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">
+	    <p style="font-size: 20px;">{$vo.art_name}</p>
+	    <p>{$vo.art_remarks|mac_substring='5000'}</p>
+	    <p>{$vo.art_blurb|mac_substring='5000'}</p>
+	    <p>{$vo.art_jumpurl|mac_substring='5000'}</p>
+	    {if condition="($maccms.aid eq 1) OR ($obj.type_id eq 5)"}
+	    <span class="name_text{$vo.type.type_id} pic_text text_right">
+	     {$vo.type.type_name|mac_substring='5000'}</span>
+	     {/if}
+	     </a>
+	</div>
+	<div class="tg3">
+	    <a class="tg3n digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">GO</a>
+	</div>
+</div>
+{else}
+<div class="tg">
+    <div class="tg1" style="display: inline-block;float: left;">
+        <a class="digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">
+		<img class="tgtu lazyload" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}" data-original="{$vo.art_pic|mac_url_img}">
+	     <div class="tgtext">
+	         <span>点击量：{$vo.vod_up}{$vo.art_up}{$vo.topic_up}</span>
+	         &nbsp;&nbsp;
+	         <span>发布：{$vo.art_time|mac_friend_date}</span>
+	     </div></a>
+	</div>
+	<div class="tg2">
+	    <a class="digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">
+	    <p style="font-size: 20px;">{$vo.art_name}</p>
+	    <p>{$vo.art_remarks|mac_substring='5000'}</p>
+	    <p>{$vo.art_blurb|mac_substring='5000'}</p>
+	    <p>{$vo.art_jumpurl|mac_substring='5000'}</p>
+	    {if condition="($maccms.aid eq 1) OR ($obj.type_id eq 5)"}
+	    <span class="name_text{$vo.type.type_id} pic_text text_right">
+	     {$vo.type.type_name|mac_substring='5000'}</span>
+	     {/if}
+	     </a>
+	</div>
+	<div class="tg3">
+	    <a class="tg3n digg_link" data-id="{$vo.vod_id}{$vo.art_id}{$vo.topic_id}" data-mid="{$maccms.mid}" data-type="up" href="{$vo.art_jumpurl}" target="_blank" title="{$vo.art_name}">GO</a>
+	</div>
+</div>
+{/if}

@@ -1,0 +1,7 @@
+﻿﻿视频管理,vod/data
+海螺模板设置,/nineqing.php/admin/conch/theme
+短视模板,/nineqing.php/admin/dscms/configweixin
+萌芽采集资源,collect2/union
+玖卿智能M3U8播放器,/jiuqingplayer/dp/?url=
+玖卿CKplayer x播放器,/ckplayer/index.php?url=
+玖卿CKplayer x后台,/ckplayer/nineqing/

@@ -1,0 +1,140 @@
+{include file="../../../application/admin/view/public/head" /}
+
+<div class="page-container">
+
+    <div class="showpic" style="display:none;"><img class="showpic_img" width="120" height="160"></div>
+
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-tab">
+            <div class="layui-tab-content">
+
+                <div class="layui-tab-item layui-show">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">APP启动图：</label>
+                        <div class="layui-input-inline w600">
+                            <input type="text" name="app_setting[start_img]" placeholder="APP启动图图片地址或路径" value="{$config['app_setting']['start_img']}" class="layui-input upload-input">
+                        </div>
+                        <div class="layui-input-inline ">
+                            <button type="button" class="layui-btn layui-upload" lay-data="{data:{thumb:0,thumb_class:'upload-thumb'}}" id="upload1">上传图片</button>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">播放前广告地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="app_setting[before_play_url]" placeholder="播放前广告地址" value="{$config['app_setting']['before_play_url']}" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">播放前图片：</label>
+                        <div class="layui-input-inline w600">
+                            <input type="text" name="app_setting[before_play_img]" placeholder="播放前图片" value="{$config['app_setting']['before_play_img']}" class="layui-input upload-input">
+                        </div>
+                        <div class="layui-input-inline ">
+                            <button type="button" class="layui-btn layui-upload" lay-data="{data:{thumb:0,thumb_class:'upload-thumb'}}" id="upload2">上传图片</button>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">水印跳转地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="app_setting[water_url]" placeholder="水印跳转地址" value="{$config['app_setting']['water_url']}" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">水印图片：</label>
+                        <div class="layui-input-inline w600">
+                            <input type="text" name="app_setting[water_img]" placeholder="水印图片" value="{$config['app_setting']['water_img']}" class="layui-input upload-input">
+                        </div>
+                        <div class="layui-input-inline ">
+                            <button type="button" class="layui-btn layui-upload" lay-data="{data:{thumb:0,thumb_class:'upload-thumb'}}" id="upload3">上传图片</button>
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">显示退出按钮：</label>
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="app_setting[has_logout]" value="0" title="隐藏" checked=""><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>关闭</div></div>
+                            <input type="radio" name="app_setting[has_logout]" value="1" title="显示"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>多域</div></div>
+                        </div>
+                    </div>
+
+            </div>
+
+
+
+
+                <div class="layui-form-item center">
+                    <div class="layui-input-block">
+                        <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit">保 存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{include file="../../../application/admin/view/public/foot" /}
+<script type="text/javascript">
+    layui.use(['form','upload', 'layer'], function(){
+        // 操作对象
+        var form = layui.form
+                , layer = layui.layer
+                , upload = layui.upload;
+
+        form.on('radio(cache_type)',function(data){
+            $('.row_cache_server').hide();
+           if(data.value=='memcache' || data.value=='redis' || data.value=='memcached'){
+               $('.row_cache_server').show();
+           }
+        });
+
+
+        upload.render({
+            elem: '.layui-upload'
+            ,url: "{:url('upload/upload')}?flag=app"
+            ,method: 'post'
+            ,before: function(input) {
+                layer.msg('文件上传中...', {time:3000000});
+            },done: function(res, index, upload) {
+                var obj = this.item;
+                if (res.code == 0) {
+                    layer.msg(res.msg);
+                    return false;
+                }
+                layer.closeAll();
+                var input = $(obj).parent().parent().find('.upload-input');
+                if ($(obj).attr('lay-type') == 'image') {
+                    input.siblings('img').attr('src', res.data.file).show();
+                }
+                input.val(res.data.file);
+
+                if(res.data.thumb_class !=''){
+                    $('.'+ res.data.thumb_class).val(res.data.thumb[0].file);
+                }
+            }
+        });
+
+        $('.upload-input').hover(function (e){
+            var e = window.event || e;
+            var imgsrc = $(this).val();
+            if(imgsrc.trim()==""){ return; }
+            var left = e.clientX+document.body.scrollLeft+20;
+            var top = e.clientY+document.body.scrollTop+20;
+            $(".showpic").css({left:left,top:top,display:""});
+            if(imgsrc.indexOf('://')<0){ imgsrc = ROOT_PATH + '/' + imgsrc;	} else{ imgsrc = imgsrc.replace('mac:','http:'); }
+            $(".showpic_img").attr("src", imgsrc);
+        },function (e){
+            $(".showpic").css("display","none");
+        });
+
+
+    });
+
+
+
+</script>
+
+</body>
+</html>

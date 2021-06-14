@@ -1,0 +1,4 @@
+本代码没有一个加密文件,理论后门都去掉了,可自行更改.理论/asset/admin/Dscms.php和/js/ec.js及/js/debugging.js通杀2.0所有版本,替换即可。
+
+模板后台快捷菜单 配置：
+短视模板,/nineqing.php/admin/dscms/configweixin

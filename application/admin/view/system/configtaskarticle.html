@@ -1,0 +1,147 @@
+{include file="../../../application/admin/view/public/head" /}
+{include file="../../../application/admin/view/public/editor" flag="art_editor"/}
+<div class="page-container">
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">任务中心配置</li>
+            </ul>
+            <div class="layui-tab-content">
+
+
+
+            <div class="layui-tab-item layui-show">
+                <blockquote class="layui-elem-quote layui-quote-nm">
+
+                    签到奖励配置
+
+                </blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="sign_status" value="0" title="关闭" {if condition="$config['sign']['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="sign_status" value="1" title="开启" {if condition="$config['sign']['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">奖励积分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="sign_points" name="sign_points" placeholder="" value="{$config['sign']['reward']['points']}" class="layui-input "  >
+                    </div>
+                </div>
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    评论奖励配置
+                </blockquote>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="comment_status" value="0" title="关闭" {if condition="$config['comment']['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="comment_status" value="1" title="开启" {if condition="$config['comment']['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">奖励积分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="comment_points" name="comment_points" placeholder="" value="{$config['comment']['reward']['points']}" class="layui-input "  >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单日获取次数上限：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="comment_reward_num" placeholder="每日最多获取奖励次数(0 表示不限制)" name="comment_reward_num" placeholder="" value="{$config['comment']['reward_num']}" class="layui-input "  >
+                    </div>
+                </div>
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    评分奖励配置
+                </blockquote>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="mark_status" value="0" title="关闭" {if condition="$config['mark']['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="mark_status" value="1" title="开启" {if condition="$config['mark']['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+                <div class="layu    i-form-item">
+                    <label class="layui-form-label">奖励积分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="mark_points" name="mark_points" placeholder="" value="{$config['mark']['reward']['points']}" class="layui-input "  >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单日获取次数上限：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="mark_reward_num" placeholder="每日最多获取奖励次数(0 表示不限制)" name="mark_reward_num" placeholder="" value="{$config['mark']['reward_num']}" class="layui-input "  >
+                    </div>
+                </div>
+
+
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    弹幕奖励配置
+                </blockquote>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="danmu_status" value="0" title="关闭" {if condition="$config['danmu']['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="danmu_status" value="1" title="开启" {if condition="$config['danmu']['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+                <div class="layu    i-form-item">
+                    <label class="layui-form-label">奖励积分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="danmu_points" name="danmu_points" placeholder="" value="{$config['danmu']['reward']['points']}" class="layui-input "  >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单日获取次数上限：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="danmu_reward_num" placeholder="每日最多获取奖励次数(0 表示不限制)" name="danmu_reward_num" placeholder="" value="{$config['danmu']['reward_num']}" class="layui-input "  >
+                    </div>
+                </div>
+                
+                <blockquote class="layui-elem-quote layui-quote-nm">
+                    分享奖励配置
+                </blockquote>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="share_status" value="0" title="关闭" {if condition="$config['share']['status'] neq 1"}checked {/if}>
+                        <input type="radio" name="share_status" value="1" title="开启" {if condition="$config['share']['status'] eq 1"}checked {/if}>
+                    </div>
+                </div>
+                <div class="layu    i-form-item">
+                    <label class="layui-form-label">奖励积分：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="share_points" name="share_points" placeholder="" value="{$config['share']['reward']['points']}" class="layui-input "  >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">单日获取次数上限：</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="share_reward_num" placeholder="每日最多获取奖励次数(0 表示不限制)" name="share_reward_num" placeholder="" value="{$config['share']['reward_num']}" class="layui-input "  >
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="layui-form-item center">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit">保 存</button>
+                <button class="layui-btn layui-btn-warm" type="reset">还 原</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{include file="../../../application/admin/view/public/foot" /}
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
