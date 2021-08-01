@@ -18,13 +18,13 @@ return array (
   'site' => 
   array (
     'site_name' => '玖卿乐播-享你所想-看你所看',
-    'site_url' => 'vod.nqcode.cn',
-    'site_wapurl' => 'vod.nqcode.cn',
+    'site_url' => '',
+    'site_wapurl' => '',
     'site_keywords' => '玖卿乐播-享你所想-看你所看',
     'site_description' => '提供最新最快的影视资讯和在线播放',
     'site_icp' => 'icp123',
     'site_qq' => '123456',
-    'site_email' => '1036706612@qq.com',
+    'site_email' => '123456@qq.com',
     'install_dir' => '/',
     'site_logo' => 'static/images/logo.jpg',
     'site_waplogo' => 'static/images/logo.jpg',
@@ -68,7 +68,7 @@ return array (
     'editor' => 'ueditor',
     'player_sort' => '1',
     'encrypt' => '0',
-    'share_url' => 'http://vod.nqcode.cn/reg/reg.html',
+    'share_url' => 'http://www.baidu.com/reg/reg.html',
     'share_logo' => 'https://s2.ax1x.com/2019/12/25/liwuvt.png',
     'search_hot' => '变形金刚,火影忍者,复仇者联盟,战狼,红海行动,学警旋风',
     'art_extend_class' => '段子手,私房话,八卦精,爱生活,汽车迷,科技咖,美食家,辣妈帮',
@@ -86,7 +86,7 @@ return array (
   'app_setting' => 
   array (
     'start_img' => 'https://cloudrevebynineqing.oss-cn-qingdao.aliyuncs.com/uploads%2F2021%2F01%2F03%2FqDjm1QJ4_lunching.gif?',
-    'before_play_url' => 'https://vod.nqcode.cn',
+    'before_play_url' => '',
     'before_play_img' => '',
     'water_url' => '',
     'water_img' => 'https://cloudrevebynineqing.oss-cn-qingdao.aliyuncs.com/uploads/2021/01/04/logo_white.png',
@@ -198,10 +198,10 @@ return array (
       ),
       'qiniu' => 
       array (
-        'bucket' => 'tv-bynineqing-image',
-        'accesskey' => 'iZXlPMiVB6B-05tfUaJOQI7E7D5Qx0Zm_8UwgnTy',
-        'secretkey' => '9bumD_dVOBV268GMZJ4V0thDf1xuMxnUbenjgqis',
-        'url' => 'https://tv-img.nineqing.com',
+        'bucket' => '',
+        'accesskey' => '',
+        'secretkey' => '',
+        'url' => '',
       ),
       'upyun' => 
       array (
@@ -512,8 +512,8 @@ label-<file> => label/index',
   array (
     'host' => 'smtp.qq.com',
     'port' => '587',
-    'username' => 'cloud.nineqingcom@qq.com',
-    'password' => 'lluwaabeyrppjbdg',
+    'username' => '',
+    'password' => '',
     'nick' => '玖卿乐播',
     'test' => '1036706612@qq.com',
   ),
@@ -539,10 +539,10 @@ label-<file> => label/index',
   'sms' => 
   array (
     'type' => 'Aliyun',
-    'appid' => 'LTAI4GJ61AXhPRwU8hnrC6sr',
-    'appkey' => 'F7ABMbA48UXnmypiv3rybiKFY1El8K',
-    'sign' => '玖居暗巷',
-    'tpl_code_reg' => 'SMS_210077890',
+    'appid' => '',
+    'appkey' => '',
+    'sign' => '',
+    'tpl_code_reg' => '',
     'tpl_code_bind' => '',
     'tpl_code_findpass' => '',
   ),
